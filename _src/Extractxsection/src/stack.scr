@@ -1,0 +1,12 @@
+
+#	Version: 16.01 s032 (v16-1-53AS) i86
+version 16.01
+
+setwindow pcb
+trapsize 352823
+generaledit
+skill 'load "stack.il"' 
+xs 
+setwindow pcb
+
+#	stop time: Fri Oct 10 14:37:53 2008

@@ -1,0 +1,6 @@
+allegro!base!2!MENUITEM "&Destubifier", "R_destub_main"
+allegro!base!2!POPUP "&DT Settings"
+allegro!base!2!BEGIN
+allegro!base!3!MENUITEM "&Uninstall", "DT_uninstall_main"
+allegro!base!2!END
+allegro!base!2!END

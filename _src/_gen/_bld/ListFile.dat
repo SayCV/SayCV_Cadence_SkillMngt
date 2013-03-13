@@ -1,0 +1,6 @@
+/_gen/DT_install_UNIX.sh                 !/DT_install_UNIX.sh
+/_gen/DT_install_MSWIN.bat               !/DT_install_MSWIN.bat
+/_gen/DT_install.scr                     !/base/ins/DT_install.scr
+/_gen/DT_install_sets.il                 !/base/ins/DT_install_sets.il
+/_gen/DT_install_menu.il                 !/base/ins/DT_install_menu.il
+/_gen/_DTL_MENUS.il                    !/base/lib/_DTL_MENUS.il

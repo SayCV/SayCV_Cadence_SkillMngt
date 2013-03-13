@@ -1,0 +1,7 @@
+allegro!nil!1!POPUP "Desi&gnTools"
+allegro!nil!1!BEGIN
+allegro!base!2!POPUP "&DT SettingsX"
+allegro!base!2!BEGIN
+allegro!base!3!MENUITEM "&Uninstall", "DT_uninstall_main"
+allegro!base!2!END
+allegro!nil!1!END

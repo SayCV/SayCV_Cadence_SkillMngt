@@ -1,0 +1,212 @@
+Release Build Log
+Version: DesignTools Release Generator v1.0.0
+Release Build Date: 2011.08.30-09:45:34 GMT
+
+--------------------------------------------------------------------------------
+UserName: CHAOS
+UserNumb: UID
+UserDbug: DEBUG
+module..: base         20110801
+module..: ChaosUtils   20110801
+module..: Extractxsection 20110801
+module..: NetworkCollections 20110801
+module..: alignsymbol  20110801
+module..: logomaker    20110801
+module..: destub       20110801
+module..: deliver      20110801
+module..: memmon       20110801
+module..: rotator      20110801
+
+--------------------------------------------------------------------------------
+Proc_Mod: base
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/base
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/base
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/base/cfg
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/base/lib
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/base/ins
+cpy_file: /base/man/_readme.txt -> /_readme.txt
+cpy_file: /base/cfg/DT_config.il -> /base/cfg/DT_config.il
+cpy_file: /base/cfg/DT_config_quickhelp.txt -> /base/cfg/DT_config_quickhelp.txt
+cpy_file: /base/ins/DT_install.il -> /base/ins/DT_install.il
+cpy_file: /base/ins/DT_uninstall.il -> /base/ins/DT_uninstall.il
+cpy_file: /base/ins/dummy.txt -> /base/ins/DT_install_sets.il
+cpy_file: /base/ins/dummy.txt -> /base/ins/DT_install_menu.il
+cpy_file: /base/lib/_DTL_UTILS.il -> /base/lib/_DTL_UTILS.il
+cpy_file: /base/lib/_DTL_UIGUI.il -> /base/lib/_DTL_UIGUI.il
+cpy_file: /base/lib/dummy.txt -> /base/lib/_DTL_MENUS.il
+
+--------------------------------------------------------------------------------
+Proc_Mod: ChaosUtils
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/ChaosUtils
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/ChaosUtils
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/ChaosUtils/src
+cpy_file: /ChaosUtils/src/chaosutils_DebugSkill.il -> /ChaosUtils/src/chaosutils_DebugSkill.il
+
+--------------------------------------------------------------------------------
+Proc_Mod: Extractxsection
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/Extractxsection
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/ExtractXSection
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/ExtractXSection/src
+cpy_file: /ExtractXSection/src/stack.il -> /ExtractXSection/src/stack.il
+cpy_file: /ExtractXSection/src/stack.scr -> /ExtractXSection/src/stack.scr
+cpy_file: /ExtractXSection/src/materials.dat -> /ExtractXSection/src/materials.dat
+
+--------------------------------------------------------------------------------
+Proc_Mod: NetworkCollections
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/NetworkCollections
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/NetworkCollections
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/NetworkCollections/src
+cpy_file: /NetworkCollections/src/lgs_grid_system.il -> /NetworkCollections/src/lgs_grid_system.il
+cpy_file: /NetworkCollections/src/Create_Thermal_Flash.il -> /NetworkCollections/src/Create_Thermal_Flash.il
+cpy_file: /NetworkCollections/src/dsy_setlayout.il -> /NetworkCollections/src/dsy_setlayout.il
+cpy_file: /NetworkCollections/src/dsy_extract.il -> /NetworkCollections/src/dsy_extract.il
+cpy_file: /NetworkCollections/src/jfh_refdes_location.il -> /NetworkCollections/src/jfh_refdes_location.il
+cpy_file: /NetworkCollections/src/jfh_refdes_rotate.il -> /NetworkCollections/src/jfh_refdes_rotate.il
+cpy_file: /NetworkCollections/src/jkAdd_ICT_testpoint.il -> /NetworkCollections/src/jkAdd_ICT_testpoint.il
+cpy_file: /NetworkCollections/src/jkAddLayerList.il -> /NetworkCollections/src/jkAddLayerList.il
+cpy_file: /NetworkCollections/src/lgs_tech_manager_V1_2.il -> /NetworkCollections/src/lgs_tech_manager_V1_2.il
+cpy_file: /NetworkCollections/src/CONSTRAINS_V1.lte -> /NetworkCollections/src/CONSTRAINS_V1.lte
+cpy_file: /NetworkCollections/src/pdi_vis.il -> /NetworkCollections/src/pdi_vis.il
+
+--------------------------------------------------------------------------------
+Proc_Mod: alignsymbol
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/alignsymbol
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/alignsymbol
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/alignsymbol/src
+cpy_file: /alignsymbol/src/CT_alignsymbol.il -> /alignsymbol/src/CT_alignsymbol.il
+cpy_file: /alignsymbol/src/CT_alignsymbol_quickhelp.txt -> /alignsymbol/src/CT_alignsymbol_quickhelp.txt
+cpy_file: /alignsymbol/src/align.il -> /alignsymbol/src/align.il
+cpy_file: /alignsymbol/src/align_do.il -> /alignsymbol/src/align_do.il
+cpy_file: /alignsymbol/src/align_utils.il -> /alignsymbol/src/align_utils.il
+cpy_file: /alignsymbol/src/align.form -> /alignsymbol/src/align.form
+cpy_file: /alignsymbol/src/align-bottom.bmp -> /alignsymbol/src/align-bottom.bmp
+cpy_file: /alignsymbol/src/align-centerH.bmp -> /alignsymbol/src/align-centerH.bmp
+cpy_file: /alignsymbol/src/align-centerV.bmp -> /alignsymbol/src/align-centerV.bmp
+cpy_file: /alignsymbol/src/align-left.bmp -> /alignsymbol/src/align-left.bmp
+cpy_file: /alignsymbol/src/align-right.bmp -> /alignsymbol/src/align-right.bmp
+cpy_file: /alignsymbol/src/align-top.bmp -> /alignsymbol/src/align-top.bmp
+cpy_file: /alignsymbol/src/distributeH.bmp -> /alignsymbol/src/distributeH.bmp
+cpy_file: /alignsymbol/src/distributeV.bmp -> /alignsymbol/src/distributeV.bmp
+cpy_file: /alignsymbol/src/pickH.bmp -> /alignsymbol/src/pickH.bmp
+cpy_file: /alignsymbol/src/pickV.bmp -> /alignsymbol/src/pickV.bmp
+
+--------------------------------------------------------------------------------
+Proc_Mod: logomaker
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/logomaker
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/logomaker
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/logomaker/src
+cpy_file: /logomaker/src/logoMaker_ImageMagick.il -> /logomaker/src/logoMaker_ImageMagick.il
+cpy_file: /logomaker/src/logoMaker_LEDTOOLS.il -> /logomaker/src/logoMaker_LEDTOOLS.il
+cpy_file: /logomaker/src/logoMaker_lfc_Help.txt -> /logomaker/src/logoMaker_lfc_Help.txt
+
+--------------------------------------------------------------------------------
+Proc_Mod: destub
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/destub
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/destub
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/destub/src
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/destub/man
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/destub/man/img
+cpy_file: /destub/man/_readme.txt -> /destub/_readme.txt
+cpy_file: /destub/src/DT_destub.il -> /destub/src/DT_destub.il
+cpy_file: /destub/src/DT_destub_treeset.bmp -> /destub/src/DT_destub_treeset.bmp
+cpy_file: /destub/src/DT_destub_dot_grn.bmp -> /destub/src/DT_destub_dot_grn.bmp
+cpy_file: /destub/src/DT_destub_dot_red.bmp -> /destub/src/DT_destub_dot_red.bmp
+cpy_file: /destub/src/DT_destub_dot_yel.bmp -> /destub/src/DT_destub_dot_yel.bmp
+cpy_file: /destub/src/DT_destub_fld_grn.bmp -> /destub/src/DT_destub_fld_grn.bmp
+cpy_file: /destub/src/DT_destub_fld_hlf.bmp -> /destub/src/DT_destub_fld_hlf.bmp
+cpy_file: /destub/src/DT_destub_fld_red.bmp -> /destub/src/DT_destub_fld_red.bmp
+cpy_file: /destub/src/DT_destub_fld_yel.bmp -> /destub/src/DT_destub_fld_yel.bmp
+cpy_file: /destub/src/DT_destub_dot_blu.bmp -> /destub/src/DT_destub_dot_blu.bmp
+cpy_file: /destub/man/index.html -> /destub/man/index.html
+cpy_file: /destub/man/img/logo.jpg -> /destub/man/img/logo.jpg
+
+--------------------------------------------------------------------------------
+Proc_Mod: deliver
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/deliver
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/deliver
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/deliver/src
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/deliver/man
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/deliver/man/img
+cpy_file: /deliver/man/_readme.txt -> /deliver/_readme.txt
+cpy_file: /deliver/src/DT_deliver.il -> /deliver/src/DT_deliver.il
+cpy_file: /deliver/man/index.html -> /deliver/man/index.html
+cpy_file: /deliver/man/img/logo.jpg -> /deliver/man/img/logo.jpg
+
+--------------------------------------------------------------------------------
+Proc_Mod: memmon
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/memmon
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/memmon
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/memmon/src
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/memmon/man
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/memmon/man/img
+cpy_file: /memmon/man/_readme.txt -> /memmon/_readme.txt
+cpy_file: /memmon/src/DT_memmon.il -> /memmon/src/DT_memmon.il
+cpy_file: /memmon/man/index.html -> /memmon/man/index.html
+cpy_file: /memmon/man/img/logo.jpg -> /memmon/man/img/logo.jpg
+
+--------------------------------------------------------------------------------
+Proc_Mod: rotator
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/rotator
+PATHData: ./_bld/ListPath.dat
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/rotator
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/rotator/src
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/rotator/man
+Add_Path: F:/2011-Casic/oths_workings/skill_chaostools/_release/ChaosTools-src/rotator/man/img
+cpy_file: /rotator/man/_readme.txt -> /rotator/_readme.txt
+cpy_file: /rotator/src/DT_rotator.il -> /rotator/src/DT_rotator.il
+cpy_file: /rotator/src/DT_rotator_quickhelp.txt -> /rotator/src/DT_rotator_quickhelp.txt
+cpy_file: /rotator/man/index.html -> /rotator/man/index.html
+cpy_file: /rotator/man/img/logo.jpg -> /rotator/man/img/logo.jpg
+
+--------------------------------------------------------------------------------
+Proc_Mod: _gen
+
+Curr_Dir: F:/2011-Casic/oths_workings/skill_chaostools/_src/_gen
+PATHData: ./_bld/ListPath.dat - Not Necessary!
+FILEData: ./_bld/ListFile.dat
+MENUData: ./_bld/ListMenu.dat - Not Necessary!
+cpy_file: /_gen/DT_install_UNIX.sh -> /DT_install_UNIX.sh
+cpy_file: /_gen/DT_install_MSWIN.bat -> /DT_install_MSWIN.bat
+cpy_file: /_gen/DT_install.scr -> /base/ins/DT_install.scr
+cpy_file: /_gen/DT_install_sets.il -> /base/ins/DT_install_sets.il
+cpy_file: /_gen/DT_install_menu.il -> /base/ins/DT_install_menu.il
+cpy_file: /_gen/_DTL_MENUS.il -> /base/lib/_DTL_MENUS.il

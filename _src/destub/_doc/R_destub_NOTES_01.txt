@@ -1,0 +1,163 @@
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+NET_OBJECT
+(
+    xnet            dbid:75916600
+    ratsnest        nil
+    ratT            nil
+    prop            propList:83824676
+    readOnly        t
+    objType         "net"
+    name            "GND"
+    nBranches       1
+    branches        (dbid:76987372)
+    parentGroups    (dbid:79195008 dbid:79195624 dbid:79205452 dbid:79434384 dbid:79259968 dbid:79895652 dbid:80012968)
+)
+
+--------------------------------------------------------------------------------
+BRANCH_OBJECT -This may be wrong... No nChildren... ?
+(
+    prop            nil
+    children        (dbid:80030012 dbid:80030140 dbid:80030288 dbid:80030416)
+    net             nil
+    parent          nil
+    objType         "branch"
+)
+--------------------------------------------------------------------------------
+CLINE_OBJECT
+(
+    prop            propList:83824664
+    bBox            ((-4587.5 614.5) (-4495.5 619.5))
+    readOnly        t
+    net             dbid:75910672
+    objType         "path"
+    segments        (dbid:79249940)
+    isEtch          t
+    nSegs           1
+    hasArcs         nil
+    isSameWidth     t
+    branch          dbid:79274624
+    layer           "ETCH/TOP"
+    symbolEtch      nil
+    parent          dbid:79274624
+    parentGroups    nil
+)
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+PATH
+(
+    prop            nil
+    bBox            ((-1028.0 1838.0) (-827.0 2179.0))
+    readOnly        t
+    net             dbid:75916600
+    segments        (dbid:80022228 dbid:80022188 dbid:80020196)
+    isEtch          t
+    nSegs           3
+    hasArcs         nil
+    isSameWidth     t
+    branch          dbid:76987440
+    parentGroups    nil
+    objType         "path"
+    layer           "ETCH/TOP"
+    symbolEtch      nil
+    parent          dbid:76987440
+)
+
+--------------------------------------------------------------------------------
+PIN
+(
+    use             "UNSPEC"
+    bBox            ((-4467.0 2958.0) (-4383.0 3042.0))
+    net             dbid:75916600
+    branch          dbid:76987440
+    isExploded      nil
+    isMech          nil
+    component       dbid:75832636
+    functionPins    (dbid:79742996)
+    prop            nil
+    readOnly        t
+    pads            (pad:87016144 pad:87016120 pad:87016096 pad:87016072 pad:87016048 pad:87016024 pad:87016000 pad:87015976 pad:87015952 pad:87015928 pad:87015904 pad:87015880 pad:87015856 pad:87015832 pad:87015808 pad:87015784 pad:87015760 pad:87015736 pad:87015712 pad:87015688 pad:87015664 pad:87015640 pad:87015616 pad:87015592 pad:87015568 pad:87015544 pad:87015520 pad:87015496 pad:87015472 pad:87015448)
+    parentGroups    nil
+    objType         "pin"
+    fixedByTestPointt
+    isThrough       t
+    name            "PCI_040D_060X_060Y"
+    testPoint       nil
+    xy              (-4425.0 3000.0)
+    startEnd        ("ETCH/TOP" "ETCH/BOTTOM")
+    rotation        0.0
+    relxy           (100.0 -500.0)
+    relRotation     0.0
+    parent          dbid:75868992
+    number          "12"
+    mirrorType      "NO"
+    isMirrored      nil
+    definition      dbid:75918716
+)
+
+--------------------------------------------------------------------------------
+SHAPE
+(
+    prop            nil
+    shapeAuto       nil
+    bBox            ((-1083.0 2167.0) (-902.0 2285.0))
+    readOnly        t
+    voids           nil
+    net             dbid:75916600
+    segments        (dbid:80024256 dbid:80024324 dbid:80024364 dbid:80024432 dbid:80024472 dbid:80024540 dbid:80024580 dbid:80024648)
+    nSegs           8
+    fill            t
+    connect         (dbid:80021244 dbid:79209716)
+    branch          dbid:76987440
+    parentGroups    (dbid:79895720)
+    objType         "shape"
+    fillOOD         nil
+    shapeBoundary   dbid:80018736
+    shapeIsBoundary nil
+    isRect          nil
+    layer           "ETCH/LAYER03_GND"
+    symbolEtch      nil
+    parent          dbid:76987440
+)
+
+--------------------------------------------------------------------------------
+TEE
+(
+    prop            nil
+    bBox            ((-1379.511 2264.999) (-1379.509 2265.001))
+    layer           "ETCH/LAYER05_SIG2"
+    xy              (-1379.51 2265.0)
+    readOnly        t
+    net             dbid:75914364
+    parent          dbid:79447736
+    branch          dbid:79447736
+    objType         "tee"
+)
+
+--------------------------------------------------------------------------------
+VIA
+(
+    prop            nil
+    bBox            ((-1038.0 2157.0) (-1006.0 2189.0))
+    readOnly        t
+    net             dbid:75916600
+    pads            (pad:87007952 pad:87007928 pad:87007904 pad:87007880 pad:87007856 pad:87007832 pad:87007808 pad:87007784 pad:87007760 pad:87007736 pad:87007712 pad:87007688 pad:87007664 pad:87007640 pad:87007616 pad:87007592 pad:87007568 pad:87007544 pad:87007520 pad:87007496 pad:87007472 pad:87007448 pad:87007424 pad:87007400 pad:87007376 pad:87007352 pad:87007328 pad:87007304 pad:87007280 pad:87007256)
+    branch          dbid:76987440
+    parentGroups    nil
+    objType         "via"
+    fixedByTestPointnil
+    isThrough       t
+    xy              (-1022.0 2173.0)
+    testPoint       nil
+    name            "VIA25R12"
+    startEnd        ("ETCH/TOP" "ETCH/BOTTOM")
+    rotation        0.0
+    symbolEtch      nil
+    parent          dbid:76987440
+    mirrorType      "NO"
+    isMirrored      nil
+    definition      dbid:75922844
+)
+

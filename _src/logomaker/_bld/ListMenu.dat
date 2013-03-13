@@ -1,0 +1,2 @@
+allegro!base!2!MENUITEM "&LogoMakerLEDTOOLS", "logomaker_lt"
+allegro!base!2!MENUITEM "&LogoMakerImageMagick", "logomaker_im"

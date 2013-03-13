@@ -1,0 +1,33 @@
+%%%%%1、编辑%%%%%\_src\ListUser.dat
+插入
+!exampleSkillName,2011.08.01
+%%%%%------------------------------
+%%%%%2、添加文件夹%%%%%\_src\exampleSkillName
+%%%%%------------------------------
+%%%%%3、添加文件夹%%%%%\_src\exampleSkillName\src
+%%%%%------------------------------
+%%%%%4、添加文件夹%%%%%\_src\exampleSkillName\_bld
+%%%%%------------------------------
+%%%%%-----%%%%%4.1、添加文件%%%%%
+\_src\exampleSkillName\_bld\ListFile.dat
+\_src\exampleSkillName\_bld\ListMenu.dat
+\_src\exampleSkillName\_bld\ListPath.dat
+%%%%%-----%%%%%-----%%%%%-----%%%%%
+%%%%%-----%%%%%4.2、编辑内容%%%%%
+\_src\exampleSkillName\_bld\ListFile.dat
+/exampleSkillName/src/xx_exampleSkillName.il              !/exampleSkillName/src/xx_exampleSkillName.il  
+/exampleSkillName/src/xx_exampleSkillName_quickhelp.txt   !/exampleSkillName/src/xx_exampleSkillName.txt
+%%%%%-----%%%%%-----%%%%%-----%%%%%
+\_src\exampleSkillName\_bld\ListMenu.dat
+allegro!base!2表示1级子菜单!MENUITEM表示菜单类型 "&exampleSkillName"表示菜单名字, "exampleSkillName"表示命令名字
+allegro!base!2!MENUITEM "&exampleSkillName", "exampleSkillName"
+%%%%%-----%%%%%-----%%%%%-----%%%%%
+\_src\exampleSkillName\_bld\ListPath.dat
+/exampleSkillName
+/exampleSkillName/src
+/exampleSkillName/img
+/exampleSkillName/.................
+%%%%%-----%%%%%-----%%%%%-----%%%%%
+%%%%%------------------------------
+%%%%%结束
+%%%%%------------------------------

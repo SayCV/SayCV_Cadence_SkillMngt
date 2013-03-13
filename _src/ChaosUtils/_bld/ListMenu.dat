@@ -1,0 +1,4 @@
+allegro!base!2!POPUP "Chaos &Utils"
+allegro!base!2!BEGIN
+allegro!base!3!MENUITEM "Debug Skill utils", "chaosutils_DebugSkill"
+allegro!base!2!END

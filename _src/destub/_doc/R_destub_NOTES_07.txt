@@ -1,0 +1,28 @@
+Howdy,
+
+I got talking with Manu this weekend about skill code and remembered that I promised to send you guys the beta of the utility I've been hacking on in my endless amounts of free time. As hands and all have allowed, I've been tinkering ever so slowly since late Feb and last week I've finally got things nearing a beta stage.
+
+Please realize this is my actual source code and obviously, it's totaly unprotected, so I really do not want it to go beyond the two of you. I just hope it let's you understand some of the type of stuff you can do in SKILL. In particular, GUI creation and UI intereaction with the tool (i.e. Allegro). Just because it *can* be done in SKILL does not meant it's a good idea to do so (you're better off in JAVA) but if you're left no choice but to do it in SKILL, it's nice to know what can be accomplished. Basically, all of Allegro, Constraint Manager and Concept are wide open for UI modification.
+
+The utility itself ("The Destubifier") basically looks for problems on the board in the etch layers. The trouble is when doing a board revision, the designer is handed the old board and a new netlist. When you import the new netlist into the old board, Allegro deletes all the unnecessary parts from the design and in Cadence tradition, the only thing that tells you what has been deleted is, of course, a well hidden log file.
+
+If if you're smart enough to turn on the "rip up etch" feature, you're still hosed since it doesn't actually work as one would expect (or as well). The removed parts still leave tons of dead etch work like traces, vias, shapes and lots of other stuff. The dead etch work does nothing more than take up perfectly good routing space, and of course there's no way to find the dead etch work, so the designer wastes 20-40 hours per design (on complex designs) trying to hunt down all the dead stuff by error prone visual inspection.
+
+The utility not only finds all the problem etch work but it tells you what is wrong with it. It will even do a linear walk from a problem object across good objects until it finds a junction or proper end point (i.e. a pin). I call these collections of walked objects "chains" -Please note the term "chain" is *NOT* a Cadence Design Systems Inc. approved buzzword.
+
+  Dead Vias       (i.e. has less than two connecting traces)
+  Dead Shapes     (i.e. has less than two connections)
+  Dead Pins       (i.e. no connections and not defined as mechanical)
+  Dead Paths      (i.e. has less than two end point connections)
+  Lonely Branches (chunks of objects without a defined net)
+  Broken Nets     (not fully connected / multiple brances)
+  Dead Chains     (a linear chain things that end in a dead object)
+  
+In the case of a BGA or similar device where a pin->trace->via fanout is desired regardless if it actually connects to anything else (i.e. when you want to test solder joints of the BGA for connectivitiy from the opposite side of the board with a "clam-shell" or "bed-of-nails" testing jig), you can easily assign a property DT_FANOUT to these objects so they can be ignored. 
+
+There are plenty of other mad features in the right click menu as well as the ability to filter everything six ways from sunday, so you only have to look at the stuff you actually want to inspect. There's lots of usability eye-candy built in there like zooming, highlighting, rats, nets and etc. You can "select/check" the bad objects you find and then delete everything you've selected.
+
+You can think of it as a problem finder/browser of sorts. It's still a work in progress and needs profiling but it's usable, stable and useful in it's current version.
+
+Anyhow, installation is fairly simple. Put the zip archive in a subdirectory off of "C:\" and extract it, then run the batch file. The subdirectory you choose for extraction can *not* have spaces in the path because Cadence tools like Allegro turn into a smoldering pile of slag when you try to run them from anyplace with whitespace in the path.
+

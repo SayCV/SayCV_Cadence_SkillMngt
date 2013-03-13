@@ -1,0 +1,52 @@
+
+From original email to you regarding this code:
+> He is working on nets not pins and going from start of the net (e.g. trace     
+> starting pin) and working to end of net (trace ending pin). In other words it's
+> only checking for a stub on the starting pin but not the ending. If you used   
+> this thing to count the stubs your numbers may be _WAY_ off.                   
+
+
+For the sake of simplicity, asume a two layer (top and bottom) design, without 
+shapes or other fancy stuff.
+
+  X  1st Pad of net
+  Z  last pad of net
+  -  Trace
+  |  Via
+
+
+
+Trace (Stub):
+  X----
+
+
+Trace, Via (Antenna)
+  X-----|
+        |
+
+
+Trace, Via, Trace (Stub)
+  X-----|
+        |-----
+
+
+Gee, we got it right.
+  X-----|
+        |-----Z
+        
+--------------------------------------------------------------------------------
+Now here is a problem condition that this code can not handle:
+
+   -----|
+        |-----Z
+
+The reason is the code does not work backwards from the "end" of the net.
+
+Below is a second problem condition that we can not handle:
+
+        |
+        |-----Z
+
+The reason is the same as above.
+
+--------------------------------------------------------------------------------

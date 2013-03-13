@@ -1,0 +1,43 @@
+DesignTools Rotator - QuickHelp
+
+The goal of the Rotator program is to do bulk
+rotation of text objects in your design. You get to
+chose what rotations you want changed based on
+degrees of rotation and the layer (class/subclass)
+where the text is written.
+
+A "Rotation Group" is a combination of a current
+degrees of rotation value of text objects and a new
+value to which it will be changed. You have three
+such groups available so you can make three
+different changes all at once.
+
+If you wanted to set the rotation of all text to
+zero (0) degrees, and the board has text rotated
+at 90, 180 and 270, you'd set up your groups as
+follows:
+
+    Rotation Group #1
+    If Rotation Is: 90
+    Then Change To: 0
+
+    Rotation Group #2
+    If Rotation Is: 180
+    Then Change To: 0
+
+    Rotation Group #3
+    If Rotation Is: 270
+    Then Change To: 0
+
+The "Default Settings" contain the "usual" class
+and subclass layers you would normally want to have
+changed. You can unselect the default layers on the
+"Settings" tab.
+
+If you want to rotate text on some class/subclass
+that is not in the defaults, you'll need to
+uncheck the "Use Default Subclasses" checkbox and
+manually select the class and subclass you want.
+You can select multiple subclasses by holding down
+the control/shift keys.
+

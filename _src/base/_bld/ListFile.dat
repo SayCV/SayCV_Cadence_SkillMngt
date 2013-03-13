@@ -1,0 +1,10 @@
+/base/man/_readme.txt                       !/_readme.txt          
+/base/cfg/DT_config.il                      !/base/cfg/DT_config.il
+/base/cfg/DT_config_quickhelp.txt           !/base/cfg/DT_config_quickhelp.txt
+/base/ins/DT_install.il                     !/base/ins/DT_install.il        
+/base/ins/DT_uninstall.il                   !/base/ins/DT_uninstall.il        
+/base/ins/dummy.txt                         !/base/ins/DT_install_sets.il
+/base/ins/dummy.txt                         !/base/ins/DT_install_menu.il
+/base/lib/_DTL_UTILS.il                   !/base/lib/_DTL_UTILS.il       
+/base/lib/_DTL_UIGUI.il                   !/base/lib/_DTL_UIGUI.il       
+/base/lib/dummy.txt                         !/base/lib/_DTL_MENUS.il       

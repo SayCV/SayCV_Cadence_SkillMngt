@@ -1,0 +1,41 @@
+(gcsummary)
+************* SUMMARY OF MEMORY ALLOCATION *************
+Maximum Process Size (i.e., voMemoryUsed) = 57262164
+Total Number of Bytes Allocated by IL =  1277410
+Total Number of Static Bytes          =   212992
+
+(axlMemSize)                            17933304
+                                        17933304
+                                        17933304
+(axlPolyMemUse)
+
+
+************* SUMMARY OF MEMORY ALLOCATION *************
+Maximum Process Size (i.e., voMemoryUsed) = 57262164
+Total Number of Bytes Allocated by IL = 1285622
+Total Number of Static Bytes          = 212992
+
+************* SUMMARY OF MEMORY ALLOCATION *************
+Maximum Process Size (i.e., voMemoryUsed) = 57262164
+Total Number of Bytes Allocated by IL = 1350672
+Total Number of Static Bytes          = 212992
+
+************* SUMMARY OF MEMORY ALLOCATION *************
+Maximum Process Size (i.e., voMemoryUsed) = 57262164
+Total Number of Bytes Allocated by IL = 1350672
+Total Number of Static Bytes          = 212992
+
+
+--------------------------------------------------------------------------------
+(axlMemSize)
+43099256
+
+************* SUMMARY OF MEMORY ALLOCATION *************
+Maximum Process Size (i.e., voMemoryUsed) = 57262164
+Total Number of Bytes Allocated by IL = 3006667
+Total Number of Static Bytes          = 843776
+
+************* SUMMARY OF MEMORY ALLOCATION *************
+Maximum Process Size (i.e., voMemoryUsed) = 57262164
+Total Number of Bytes Allocated by IL = 3006667
+Total Number of Static Bytes          = 843776

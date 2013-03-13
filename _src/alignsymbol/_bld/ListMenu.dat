@@ -1,0 +1,2 @@
+allegro!base!2!MENUITEM "&Align Symbol Simple", "alignsymbol"
+allegro!base!2!MENUITEM "&Align Symbol", "align"

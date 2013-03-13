@@ -1,0 +1,15 @@
+allegro!base!2!POPUP "&NetworkCollections"
+allegro!base!2!BEGIN
+allegro!base!3!MENUITEM "&Grid system", "grid_system"
+allegro!base!3!MENUITEM "Grid set&env", "grid_setenv"
+allegro!base!3!MENUITEM "Create Thermal Flash", "mkth"
+allegro!base!3!MENUITEM "Auto Cross section", "auto crossection"
+allegro!base!3!MENUITEM "Artwork Setup", "artwork setup"
+allegro!base!3!MENUITEM "Locate All Refdes", "ch_refdeslocate"
+allegro!base!3!MENUITEM "Rotate All Refdes", "ch_ref"
+allegro!base!3!MENUITEM "Rotate Skip Right", "ch_refskip"
+allegro!base!3!MENUITEM "Add ICT Testpoint", "add ict"
+allegro!base!3!MENUITEM "Add Layer List", "layer list"
+allegro!base!3!MENUITEM "Constraint Input System", "lgs_tech_in"
+allegro!base!3!MENUITEM "pdiVisibility", "visibility"
+allegro!base!2!END

@@ -1,0 +1,12 @@
+allegro!nil!1!POPUP "Desi&gnTools"
+allegro!nil!1!BEGIN
+allegro!nil!1!END
+cbdsymbol!nil!1!POPUP "Desi&gnTools"
+cbdsymbol!nil!1!BEGIN
+cbdsymbol!nil!1!END
+
+cbdsymbol!nil!1!POPUP "Desi&gnTools"
+cbdsymbol!nil!1!BEGIN
+cbdsymbol!nil!1!END
+
+cbdsymbol!base!2!MENUITEM "&Deliver", "DT_deliver_main"

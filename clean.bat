@@ -1,0 +1,2 @@
+del *.bak /s
+pause

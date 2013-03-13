@@ -1,0 +1,10 @@
+Image States
+	Normal
+	Normal Hilight
+	Normal Not Visible
+	Normal Not Visible Hilight
+	Marked
+	Marked Highlight
+	Marked Not Visible
+	Marked Not Visible Highlight
+

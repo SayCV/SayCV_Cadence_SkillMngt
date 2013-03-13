@@ -1,0 +1,33 @@
+DesignTools Configurator - QuickHelp
+
+The Configurator allows you to tell the DesignTools programs
+two important things:
+
+  1.) Where to find SITE Level configuration files
+      The SITE Level configuration files contain the settings
+      dictated by your company policy and are maintained by
+      your CAD manager.
+
+  2.) Contact Information
+      The contact information you provide is used in the
+      generation of reports and the packaging of deliverables.
+
+
+Known Issues:
+
+There are a few bugs in the Cadence SKILL function that allows
+you to select directories. You'll mainly see these bugs if you
+are running a Microsoft Windows operating system. If you have
+READ but not WRITE access to a directory (containing site 
+level configuration files), the Cadence SKILL directory 
+browser will not let you select that directory.
+
+The solution to this problem is to simply type in the path to 
+your SITE directoy in the provided box. What you type will be
+validated to make sure it is a directory and that you have 
+read access to it. You do not need write access to the SITE 
+level configuration files to use them. You will only need 
+write access to the SITE level configuration files if you're 
+the company CAD Manager and want to modify the configuration
+of your site.
+

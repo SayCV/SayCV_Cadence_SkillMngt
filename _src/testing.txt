@@ -1,0 +1,3 @@
+Sparc   Sun Solaris 8.0      Cadence SPB 15.2.P3   (v15-2-51C) [6/15/2004] Solaris
+x86     MS-WinNT 4.0 ("NT")  Cadence SPB 15.2.p003 (v15-2-51C) [6/15/2004] i86
+x86     MS-WinNT 5.1 ("XP")  Cadence SPB 15.5.p008 (v15-5-81J) [7/13/2005] i86

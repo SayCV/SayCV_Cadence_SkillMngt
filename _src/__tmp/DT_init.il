@@ -1,0 +1,6 @@
+(defun DT_init ()
+  (let ()
+    (axlSetVariable "designtools" "C:/src/DesignTools-src")
+    (setq DTG_CONF_USER (strcat (getShellEnvVar "HOME") "/.DesignTools/"))
+    (load (strcat DTG_CONF_USER "DT_config_cfg.il"))                      
+    ))

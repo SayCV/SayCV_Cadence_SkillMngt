@@ -1,0 +1,199 @@
+*** Pre-processing Options ***
+Title: Pre-process Image
+This section uses the mkbitmap program.
+
+Mkbitmap is a program distributed with Potrace which can be used to pre-process
+the input for better tracing behavior on greyscale and color images.
+
+mkbitmap reads an image, and applies one or more of the following operations to
+it, in this order: inversion, highpass filtering, scaling, and thresholding.
+Each operation can be individually controlled and turned on or off. 
+
+The principal use of mkbitmap is to convert color or greyscale images into a
+format suitable as input for other programs, particularly the tracing program
+potrace.
+
+It is particularly useful for converting scanned line art, such as cartoons,
+handwritten text, etc., to high-resolution bilevel images. 
+
+Highpass filtering can be used to ensure that features such as lines and text
+are preserved, while at the same time compensating for uneven background.
+
+Scaling is important because a scanned greyscale image contains more visual
+detail than a bilevel image at the same resolution. By scaling the image to
+a higher resolution (using interpolation) before thresholding it, some of this
+detail is preserved.
+
+Thresholding means converting a greyscale image to a bilevel image using only
+black and white pixels. Pixels that are darker than a certain threshold value
+are converted to black.
+
+Optional inversion is useful if the input image shows bright features on dark
+background, such as a picture of chalk drawings on a blackboard. 
+
+Invert
+	Invert the input image.
+	If this option is chosen, it is applied to the image before any other
+	operation. It is used to deal with white-on-black images, such as
+	photographs of chalk drawings on a blackboard.
+	Note that the behavior of this option is not in general the same as
+	inverting the output bitmap, unless the thresholding value is also
+	inverted. 
+
+Apply Highpass filtering
+	Apply a highpass filter to the image.
+	This filter is approximately Gaussian and non-directional.
+	The effect is to preserve small detail while compensating for unevenness
+	in the background. The parameter n is a radius (in pixels) which
+	corresponds approximately to the size of details which should be
+	preserved. More precisely, the filter is implemented by subtracting a
+	blurred version of the image from the original image.
+	The parameter n is equal to the standard deviation of the blur.
+	The output of the filtering step is a normalized image whose average
+	brightness is exactly 0.5.
+	The default filter radius is 4. 
+
+Scale
+	Scale the image by an integer factor n>0.
+	Scaling is done after highpass filtering, but before the thresholding
+	step.
+	A scaling factor of 1 indicates that no scaling is to be done.
+	Otherwise, interpolation is used to fill in the in-between pixels.
+	If the output of mkbitmap is to be used as input to a tracing program
+	such as potrace, a scaling factor of 2 is recommended. This preserves
+	the right amount of detail for the tracing algorithm to work well.
+	If a scaling factor of 1 is used, too much detail is lost.
+	If a scaling factor of 3 or higher is used, the interpolation tends to
+	"invent" detail which was not present in the original image, thus
+	preventing potrace from doing a good job. 
+
+Cubic interpolation
+	Use cubic interpolation when scaling to a higher resolution.
+	It is slower than linear interpolation, but leads to better results.
+	
+Linear interpolation
+	Use linear interpolation when scaling to a higher resolution.
+	This is slightly faster, but less nice, than the default cubic
+	interpolation. 
+
+Bilevel conversion
+	If this option is selected, processing continues using the conversion
+	threshold.
+
+Greymap conversion
+	Disable bilevel conversion.
+	If this option is selected, processing stops after the scaling step
+	and a greymap is output.
+
+Bilevel conversion threshold
+	Set the threshold grey value for bilevel conversion.
+	The parameter n is a brightness value between 0 for black and 1 for
+	white. Any pixels below this brightness will be converted to black
+	(thus, smaller values of n will lead to whiter output). 
+
+
+http://potrace.sourceforge.net/mkbitmap.1.html
+
+*** Tracing Options ***
+Title: Potrace utility options
+This section uses the Potrace program.
+
+Potrace is a utility for tracing a bitmap, which means, transforming a bitmap
+into a smooth, scalable image.
+The input is a bitmap, which means, a pixel-based image composed of the two
+colors black and white only. The resulting image is not "jaggy" like a bitmap,
+but smooth. It can then be rendered at any resolution. 
+
+The input image should only use the two colors black and white. If other pixel
+values appear in the input, they will be converted to black and white using a
+simple threshold method. 
+
+Algorithm options:
+------------------
+Turnpolicy
+	Specifies how to resolve ambiguities in path decomposition.
+	Must be one of black, white, right, left, minority, majority, or random.
+	Default is minority. 
+
+Speckle size
+	Suppress speckles of up to this many pixels. 
+
+Corner threshold
+	Set the corner threshold parameter. The default value is 1.
+	The smaller this value, the more sharp corners will be produced.
+	If this parameter is negative, then no smoothing will be performed and
+	the output is a polygon. The largest useful value is 4/3 or 1.334,
+	which suppresses all corners and leads to completely smooth output. 
+
+Curve optimization
+	Normally potrace tries to join adjacent Bezier curve segments when this
+	is possible. Disabling this behavior, results in a larger file size. 
+
+Curve optimization tolerance
+	The default value is 0.2. Larger values allow more consecutive Bezier
+	curve segments to be joined together in a single segment, at the expense
+	of accuracy. 
+
+Output quantization
+	Coordinates in the output are rounded to 1/unit pixels.
+	The default of 10 usually gives good results.
+
+Output options:
+---------------
+Blacklevel
+	Set the threshold level for converting input images to bitmaps.
+	The potrace algorithm expects a bitmap, thus all pixels of the input
+	images are converted to black or white before processing begins. Pixels
+	whose brightness is less than n are converted to black, all other pixels
+	to white.
+	Here n is a number between 0 and 1. One case is treated specially: if
+	the input is in an indexed color format with exactly 2 colors, then the
+	blacklevel is ignored and the darker of the two colors is mapped to
+	black. 
+	Note: the method used by potrace for converting greymaps to bitmaps is
+	very crude; much better results can be obtained if a separate program,
+	such as mkbitmap, is used for this purpose. In particular, mkbitmap,
+	which is distributed with potrace, has the ability to scale and
+	interpolate the image before thresholding, which results in much better
+	preservation of detail.
+
+Invert
+	Invert the input bitmap before processing.
+
+http://potrace.sourceforge.net/potrace.1.html
+
+*** Plugins ***
+Title: Plugin Options
+The LogoMaker Skill utility makes use of three free utilities that need to be
+installed before use:
+
+1/ potrace - Download from:
+	http://potrace.sourceforge.net/download/potrace-1.8.tar.gz
+	
+	set the POTRACE_PATH environment variable to the path to the executable
+	eg. C:/utils/potrace-1.8.win32-i386
+	
+2/ mkbitmap - Distributed with the potrace utility
+
+3/ LFC - Download from:
+	http://leadtools.com/Utilities/Cmd-Line/File-Converter/default.htm
+
+*** Valid Image Types ***
+Many bitmap image types can be processed:
+
+Valid types:
+ani bmp cal clp cmp cut dic emf eps fpx gif ica iff img jbg jpg mac msp pbm
+pct pcx pgm png ppm psd ras raw tga tif wmf wpg xbm xpm
+
+For a description of the valid types go to:
+	http://leadtools.com/Utilities/Cmd-Line/File-Converter/default.htm
+
+*** mkbitmap failure ***
+The mkbitmap utility failed to convert this image to a portable bitmap format.
+The most likely explanation is that the source bitmap file is invalid or corrupt.
+
+*** potrace failure ***
+The potrace utility failed to convert this image to svg.
+
+*** ImageMagick bmp conversion failure ***
+The ImageMagick utility failed to convert this image to a bmp.

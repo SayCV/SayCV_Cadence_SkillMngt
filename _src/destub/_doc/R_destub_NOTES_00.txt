@@ -1,0 +1,657 @@
+Clean Shave - The Destubifier
+
+--------------------------------------------------------------------------------
+Well the UI/GUI code is taking forever. Cross platform or not TK-ish "graphics"
+languages suck. There's a bug in the axlFormInsertCol() function that refuses
+to properly set the "colWidth" property.
+
+There are no "Form Resize" events to handle.
+
+--------------------------------------------------------------------------------
+
+Well a big problem is the with the grid itself. The cells are a defstruct which
+normally would allow one to add properties/attributes to the damn thing but
+this is not the case with the cell defstructs. This means we're stuck adding
+hidden columns to the grid since we can't stuff the additional information we
+need into some hidden place (i.e. attached to the cell in the first column or
+something like that).
+
+The way they've locked me out of the cell defstruct is by only providing two
+functions
+
+  mycell = axlFormGridNewCell()       ; => r_cell    basically make__grid_cell
+  mycell->col = 7                     ; set column number
+  mycell->row = 13                    ; set the row number
+  mycell = axlFromGridGetCell(mycell) ; => r_cell -grabs the cell from the grid
+
+  And only now are all the properties of the cell filled in from those that
+  exist for that particular cell in the grid.
+
+--------------------------------------------------------------------------------
+
+Definition of Problems
+
+net
+  Any net with more than one branch is not fully connected
+
+branch
+  Any branch not connected to a net is an error (i.e. "Lonely Branch:)
+  
+via
+  -Any via less than two connections.
+  -If a via has two (or more) connections and all connections are on the same 
+   etch layer then the via is dead.
+
+shape
+  Any shape with less than two connections
+  
+path
+  Any path with less than two connections
+  
+pin
+  Any pin with no connections
+
+tee
+  By definition, a "tee" has three connections. Deleting a "tee" seems 
+  like a really bad idea since deleting just one of it's connection paths 
+  removes the tee from the design automatically.
+
+_CHAIN_
+  A chain is simply a linear sequence of connected objects that leads to a 
+  dead object. A sequence of things from a forks/tees point (objects with 
+  more than two connections) out to the dead object.
+    
+   PAD
+    |
+    |
+   TEE----GoodVia----DeadVia
+    |
+    |
+   PAD
+
+  The portion from the TEE_CLINE_GOODVIA_CLINE_DEADVIA would be considered a
+  chain.
+
+  Note: A "Lonely Branch" _CAN_ also be a chain when it has no forks/tees 
+  (objects with more than two connections). Of course a branch can have multiple
+  forks/tees so it is _NOT_ always a chain.
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+When deleting objects, one needs to be very careful. You can accidentally delete
+not just the object but also the logic associated with it. Look at the the
+function axlDeleteObject and see the note for using "EQUIVLOGIC" during the
+selection set creation through the find filter.
+
+C:\app\Cadence\SPB_15.2\share\pcb\examples\skill\DOC\FUNCS\axlDeleteObject.txt
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+  ALL
+   |
+   +--> _CHAINS_
+   |     |
+   |     +--> Chain: CHAIN_NUM_0
+   |     |     |
+   |     |     +--> Path: PATH_NUM_0
+   |     |     |
+   |     |     +--> Path: PATH_NUM_1
+   |     |     |
+   |     |     +--> Pin: PIN_NUM_0
+   |     |     |
+   |     |     +--> Pin: PIN_NUM_1
+   |     |     |
+   |     |     +--> Shape: SHAPE_NUM_0
+   |     |     |
+   |     |     +--> Shape: SHAPE_NUM_1
+   |     |     |
+   |     |     +--> Tee: TEE_NUM_0
+   |     |     |
+   |     |     +--> Tee: TEE_NUM_1
+   |     |     |
+   |     |     +--> Via: VIA_NUM_0
+   |     |     |
+   |     |     +--> Via: VIA_NUM_1
+   |     |     |...
+   |     |
+   |     +--> Chain: CHAIN_NUM_1
+   |     | ...
+   |
+   |
+   +--> Nets
+   |     |
+   |     +--> Net: NET_NAME_0
+   |     |     |
+   |     |     +--> Branch: BRANCH_NUM_0
+   |     |     |     |
+   |     |     |     +--> Path: PATH_NUM_0
+   |     |     |     |
+   |     |     |     +--> Path: PATH_NUM_1
+   |     |     |     |
+   |     |     |     +--> Pin: PIN_NUM_0
+   |     |     |     |
+   |     |     |     +--> Pin: PIN_NUM_1
+   |     |     |     |
+   |     |     |     +--> Shape: SHAPE_NUM_0
+   |     |     |     |
+   |     |     |     +--> Shape: SHAPE_NUM_1
+   |     |     |     |
+   |     |     |     +--> Tee: TEE_NUM_0
+   |     |     |     |
+   |     |     |     +--> Tee: TEE_NUM_1
+   |     |     |     |
+   |     |     |     +--> Via: VIA_NUM_0
+   |     |     |     |
+   |     |     |     +--> Via: VIA_NUM_1
+   |     |     |     |...
+   |     |     |     
+   |     |     +--> Branch: BRANCH_NUM_1
+   |     |           | ...
+   |     |
+   |     +--> Net: NET_NAME_1
+   |           | ...
+   |   
+   +--> Branches (i.e. Dead Branches without a net)
+   |     |
+   |     +--> Branch: BRANCH_NUM_0
+   |     |     |
+   |     |     +--> Path: PATH_NUM_0
+   |     |     |
+   |     |     +--> Path: PATH_NUM_1
+   |     |     |
+   |     |     +--> Pin: PIN_NUM_0
+   |     |     |
+   |     |     +--> Pin: PIN_NUM_1
+   |     |     |
+   |     |     +--> Shape: SHAPE_NUM_0
+   |     |     |
+   |     |     +--> Shape: SHAPE_NUM_1
+   |     |     |
+   |     |     +--> Tee: TEE_NUM_0
+   |     |     |
+   |     |     +--> Tee: TEE_NUM_1
+   |     |     |
+   |     |     +--> Via: VIA_NUM_0
+   |     |     |
+   |     |     +--> Via: VIA_NUM_1
+   |     |     |...
+   |     |
+   |     +--> Branch: BRANCH_NUM_1
+   |     | ...
+   |     
+   +--> Paths
+   |     |
+   |     +--> Path: PATH_NUM_0
+   |     |
+   |     +--> Path: PATH_NUM_1
+   |     | ...
+   |     
+   +--> Pins
+   |     |
+   |     +--> Pin: PIN_NUM_0
+   |     |
+   |     +--> Pin: PIN_NUM_1
+   |     | ...
+   |     
+   +--> Shapes
+   |     |
+   |     +--> Shape: SHAPE_NUM_0
+   |     |
+   |     +--> Shape: SHAPE_NUM_1
+   |     | ...
+   |     
+   +--> Tees
+   |     |
+   |     +--> Tee: TEE_NUM_0
+   |     |
+   |     +--> Tee: TEE_NUM_1
+   |     | ...
+   |     
+   +--> Vias
+         |
+         +--> Via: VIA_NUM_0
+         |
+         +--> Via: VIA_NUM_1
+         | ...
+         
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+;   Arg1 = type of change to preform
+;          "normal"    -changes check, prop and colors back to original
+;          "select"    -Changes check value and colors
+;          "fanout"    -Changes prop value and colors
+;          "ignore"    -Changes prop value and colors
+;          "hilite"    -Just changes the background color to yellow
+;          "unlite"    -Just resets the background color
+
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+Properties in Allegro are a strange beast. They are neither lists nor
+symbols, so they must be some form of custom object or structure. The
+format of these objects is typical
+
+(DESTUB_FANOUT t DESTUB_IGNORE t)
+
+Basically a list of pairs, like an "Association List" but without the
+interal sublists on each pair. It is similar to an "Association Talble" 
+but technically it is not one, since the object fails with tablep().
+
+I would guess it is similar to a lisp "Property List" of some sort though
+the functions that _should_ work on property lists such as plist() fail 
+on this thing.
+
+The only answer is using axlDBGetProperties to return a Association List.
+
+    (if DeadVia->prop
+    then
+      (fprintf DbugFH "\n%s\n PropList\n" R_LINE3)
+      (fprintf DbugFH "\n%L\n" DeadVia->prop)
+      (_R_libUTILS_PrintProp DbugFH DeadVia->prop)
+      (pprint  DeadVia->prop->?? DbugFH)
+
+      (if (listp DeadVia->prop)
+        (fprintf DbugFH "\nYes, this is a list\n")
+        (fprintf DbugFH "\nNope, this is not a list\n")
+      )
+      (if (symbolp DeadVia->prop)
+        (fprintf DbugFH "\nYes, this is a symbol\n")
+        (fprintf DbugFH "\nNope, this is not a symbol\n")
+      )
+      (if (tablep DeadVia->prop)
+        (fprintf DbugFH "\nYes, this is a table\n")
+        (fprintf DbugFH "\nNope, this is not a table\n")
+      )
+      (if (defstructp DeadVia->prop)
+        (fprintf DbugFH "\nYes, this is a struct\n")
+        (fprintf DbugFH "\nNope, this is not a struct\n")
+      )
+;      println(plist(DeadVia->prop))
+    )
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+Stuff To Do
+      1.)   Filters
+              -list of all used nets
+              -list of all used props
+              -list of all used layers
+      2.)   process chains
+      3.)   process pins
+DONE! 4.)   progress meters                 
+      5.)   Problem Classification
+      6.)   Auto-Detection of Fanouts
+      7.)   Tree View Browsing
+      8.)   Dynamic Filter enums/drop-down
+      9.)   Deal with __FIXME__ and such
+      10.)  Improve variable scope.
+      11.)  Increase error checking
+      12.)  Form Resize
+
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+;FilterGroup
+;FilterShowText
+;FilterShow
+;FilterTypeText
+;FilterType
+;FilterNetsText
+;FilterNets
+;FilterLaysText
+;FilterLays
+;FilterPropText
+;FilterProp
+
+;GridGroup
+;GridField
+
+;VSelectRangeGroup
+;VSelectRangeLoVal
+;VSelectRangeToTxt
+;VSelectRangeHiVal
+;VSelectRangeOnBut
+;VSelectRangeUnBut
+
+;VSelectListsGroup
+;VSelectListsOnBut
+;VSelectListsUnBut
+
+;OpDeleteSelected
+;OpDeleteAllDRC
+;OpTestButton
+;OpExitButton
+;OpKeepZoom
+      
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+Oh this is priceless...
+
+Lets say you have a piece of trace, a cline, that has no connection on
+one end and is connected to a via on the other
+
+   -----V
+
+If you delete the via first, the DBID (DataBase ID) of the cline changes
+so you now have no way to identify or delete it. On the other hand, if
+you delete the cline first, the via DBID remains the same. -Think of the
+implication of walking a dead chain of objects from a dead via back to a
+fork point...
+
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+; NOTES:
+; A "branch" of a net is comprised of one or more "child" objects and it does
+; not seem that the children are stored in any particular order. This makes
+; sense if you think about it since it really is not like a set of line segments
+; (although sets of line segments called a "path" do exist as children). In other
+; words, branches are *_NOT_* linear with single start and end points.
+;
+; There are five "child" object types ("path" "pin" "shape" "tee" "via") in the
+; list of net branch children.
+;
+; The reason why the branch children seem to have no particular order is because
+; the list of children can start on any of the above child types. A similar hint
+; is that a "net" is considered "fully connected" when it only has one branch.
+;
+; In theory, any connection to a child object should also be part of the same
+; branch. For example if a shape has 4 connections, all four should be to other
+; children of the branch.
+
+
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+2005.03.08  -  Stuff To Do
+
+  Refactoring
+    Debug Printing
+    Clean Up Comments
+    Deal With __FIXME__
+    Improve Variable Scope Issues
+    Increas Error Cecking
+
+    Filter - Nets
+    Filter - Types
+    Filter - Show
+    
+    Message Window In Form
+    Problem Classification
+    Progress Meter Form For Delete *WITH CANCEL*
+    Process Chains
+    Process Pins
+    Net DBIDs / Rats / net path layers
+
+    Manual Fanout Selection
+    Automatic Fanout Detection
+    Tree View Browsing
+    Form Resize Code
+
+    Improve Auto-Zoom Utility
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+I've been working on the TreeView part and seem to have the UI basicly in shape
+and not comes the tough part, wiring it all together. It seems as though 
+Association Tables may be faster than Association Lists.
+
+The best answer is to collect a list of Items as they are created and attach
+the ItemList to the Object. This gives Object --> Item(s) mapping.
+
+The reverse mapping of Item --> Object is more of a pain and should be done
+through a Association Table (Hash Table) or Association List (list of conses).
+
+Now herein lies a problem, an DeadObject like a branch will only know about the 
+tree items that "belong" to it. A branch has subObjects, like paths and vias 
+that may also be DeadObjects and already have items associated with them.
+
+--------------------------------------------------------------------------------
+myTable = makeTable("atable1" 0)
+
+(key value)
+(key (list TmpSym->dbid index)
+(Item (list TmpSym->dbid index)
+
+(exists key myTable
+  (expression subtable)
+)
+
+Unfortunately Tables do not support the data types I need to stuff in there.
+
+--------------------------------------------------------------------------------
+association list
+
+(list (list key value) (list key value))
+
+(assoc g_key l_alist)
+
+At this point I have an association list in place which will give a mapping
+between Object and RowIndex.
+
+--------------------------------------------------------------------------------
+Need Mapping from DBID's to RowIndex values
+  ALIST_NET       (list (list DBIDnet    RowIndex) (list DBIDnet    RowIndex))
+  ALIST_BRANCH    (list (list DBIDbranch RowIndex) (list DBIDbranch RowIndex))
+  ALIST_PATH      (list (list DBIDpath   RowIndex) (list DBIDpath   RowIndex))
+  ALIST_PIN       (list (list DBIDpin    RowIndex) (list DBIDpin    RowIndex))
+  ALIST_SHAPE     (list (list DBIDshape  RowIndex) (list DBIDshape  RowIndex))
+  ALIST_VIA       (list (list DBIDvia    RowIndex) (list DBIDvia    RowIndex))
+
+Allows mapping from dbids to row index numbers
+
+--------------------------------------------------------------------------------
+Need Mapping From ProbObject to TreeItems (multiple)
+  FULL_LIST TmpSym->tree  (a list of all tree items for this ProbObject)
+
+--------------------------------------------------------------------------------
+Need Mapping from TreeItem to ProbObject
+
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+;Setting/Clearing DRC's
+;
+;        This will check if a DBID is an a real/existing Allegro DBID
+;        axlIsDBIDType(object)  => t/nil
+;
+;         axlDBCreateExternalDRC(
+;             t_constraint
+;             l_anchorPoint
+;             t_layer
+;             [lo_dbid]            <-- hook up object DBID to User DRC
+;             [l_secondPoint]
+;             [t_actualValue]
+;         )
+;  We can then cycle through the DRC's and check the type (i.e. "user") and if
+;  the DBID listed is real/existing.
+;
+;-------------------------------------------------------------------------------
+
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+fix ratsnest highlighting -done
+fix filtering -done
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+Thinkity Thinkity Think...
+
+There must be a decent way of doing all this. Let's see what we have...
+
+We have Allegro DBID objects, lots of them and all different types.
+
+We have a stupid grid that does not support augmenting the data in cells.
+  The most we can get out of the damn thing is a row number.
+  The scripting functionality does not work all that well but can work to
+  reference pSym's It can be done with stringToSymbol on load and the 
+  reverse on the way out. Note this requires using all lower case on pSym names
+  or for some strange reason it breaks.
+
+  If we use the scriptLabel we can do away with column 8 all together.
+
+We have an even more stupid tree that also does not support augmenting items.
+  Items know their parents
+  Parents don't know their child items
+
+    One To One.:         DBID  --->  pSym    -interesting problem...
+  
+    One To One.:       RowNum  --->  pSym    (via scriptLabel)
+    One To One.:   pSym->ndex  --->  RowNum  (via row_init/sort)
+                  
+    One To One.:     TreeItem  --->  pSym     RGsl_DEAD_ITEM
+    One To One.:     TreeItem  --->  RowNum
+    One To Many:         pSym  --->  TreeItems
+
+    Many To One:    TreeItems  --->  pSym     (unnecessary?)
+
+
+(
+  dbid            (dbid:79278876)
+  ndex            nil
+  prop            nil
+  lays            ("TOP" "LAYER02_PWR" "LAYER03_GND" "LAYER04_SIG1" "LAYER05_SIG2" "LAYER06_GND" "TES 1" "LAYER07_PWR" "BOTTOM")
+  tree            (TreeViewItem:1beae78)
+  nets            ""
+  yval            11300.88
+  xval            -4505.118
+  type            "via"
+  chck            nil
+)
+
+________________________________________________________________________________
+********************************************************************************
+  (when DMSG
+    (fprintf DbugFH "\n\n%s\n%s\nNOTE: R_destub_data_via\n" RG_t_LINE1 RG_t_LINE2)
+    (fprintf DbugFH "ViaDBIDList Count: %8d\n" (length ViaDBIDList))
+    (fprintf DbugFH "Dead Via Count...: %8d\n" (length RGld_DEAD_VIA))
+;    (_R_libUTILS_PrintProp DbugFH ViaDBIDList)
+;    (setq TmpVia (car ViaDBIDList))
+;    (_R_libUTILS_PrintProp DbugFH TmpVia)
+;    (_R_libUTILS_PrintProp DbugFH TmpVia->prop)
+;    (pprint RGld_DEAD_VIA DbugFH)
+  )
+
+--------------------------------------------------------------------------------
+Need Mapping from DBID's to RowIndex values
+  ALIST_NET       (list (list DBIDnet    RowIndex) (list DBIDnet    RowIndex))
+  ALIST_BRANCH    (list (list DBIDbranch RowIndex) (list DBIDbranch RowIndex))
+  ALIST_PATH      (list (list DBIDpath   RowIndex) (list DBIDpath   RowIndex))
+  ALIST_PIN       (list (list DBIDpin    RowIndex) (list DBIDpin    RowIndex))
+  ALIST_SHAPE     (list (list DBIDshape  RowIndex) (list DBIDshape  RowIndex))
+  ALIST_VIA       (list (list DBIDvia    RowIndex) (list DBIDvia    RowIndex))
+
+Allows mapping from dbids to row index numbers
+
+--------------------------------------------------------------------------------
+Need Mapping From ProbObject to TreeItems (multiple)
+  FULL_LIST TmpSym->tree  (a list of all tree items for this ProbObject)
+
+--------------------------------------------------------------------------------
+Need Mapping from TreeItem to ProbObject
+
+(skLineNumber nil)
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+
+OK, so I've got a lot of things working but the result is a real mess and has
+a lot of issues. The problem is my event model sucks. A lot of this is my fault
+but I'm sure I could conjure up a reason or two to curse out Cadence for their
+highly limited API and UI support.
+
+Once again it's time to think about the structure of the whole thing... What the
+heck I want it to do and how to make it do those things correctly.
+
+Writing to the cells should be limited to one function, even though this will
+effect speed on things like per-column sorting. It probably won't work out this
+way but it would be nice for maintainability. Similar is true for tree items
+but that's even more of a mess.
+
+Wiring together the interaction between the treeview and the spread sheet grid
+makes hemroids look painless.
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+2005.03.18 currently at v1.40
+
+Things are in a working state with the new UI... -Only to find out one of the
+UI elements I used will explode when I feed it all the data I need. Oh well,
+not a huge deal.
+
+Things to do:
+
+  1.)   change UI to support a "LIST" field so it can hold over 256 net names.
+  2.)   Isolate all layer visibility/hilight code and refactor
+        Fix Images
+  3.)   rewrite deletion function.
+        -Make a "Delete Window" Form with cancel button
+  4.)   Isolate all image flipping code and refactor
+  5.)   Improve spedd on column highlighting -no need to do the full list.
+  6.)   Find and kill Image Flip bug on net folders
+  7.)   Replace all infix notation
+  8.)   Improve load speed
+  9.)   Improve Zoom Code
+  10.)  Deal with image names
+  11.)  Work on chain mode
+  12.)  Show image/indication that delete operations on parent will remove
+        child objects that are good.
+  13.)  Isolate Programatic (side effects) versus Functional code into blocks
+  14.)  Recode how properties are handled on nets and branches
+        -all child objects must have said property.
+
+If I ever write my own EDA/CAD package:
+  NET
+    LINKS   makes more sense than
+    
+  NET
+    BRANCHES
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+Bugs:
+  Fix Group Start/End code
+  Fix Tree Image flipping for filtered out items like pins that are child 
+    objects of some branch or net.
+  
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
+2005.04.06
+
+- Need to create a directory under the current working directory to hold files,
+  logs and what not.
+  
+
+
+ 
+
+
+
+

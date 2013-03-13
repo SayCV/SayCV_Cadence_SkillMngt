@@ -1,0 +1,86 @@
+Maintaing a consistent coding style in SKILL is a real mess. If you ever check out any of the free SKILL code offered by Cadence, you'll know what I mean. Originally, SKILL was a LISP based language but over the decades, they've managed to weld large chunks of ANSI-C into it. With some less than clever hacks, the SKILL parser understands both Prefix and Infix notation (most of the time).
+
+  (FunctionName Arg1 Arg2)    Prefix (Polish)
+  FunctionName( Arg1 Arg2)    Infix
+
+With Infix notation, if you mistakenly write something like 
+
+  FunctionName(Arg1 Arg2)
+
+you're totally hosed because the space after the opening parenthesis in the first example is actually mandatory. Similar caveats exist where and ending space is mandatory before the closing parenthesis. Yep, you're talking about exact placement of whitespace.
+
+Getting accustomed to Prefix Notation and LISP syntax is not easy for someone accustomed to working in Infix Notation used in most languages. Typical LISP syntax uses indenting and new lines much differently than other languages and quite normally has a nice stack of closing parenthesis at the end.
+
+Using the if-then-else is probably a poor choice on my part because in most languages it doesn't actually return anything, while in contrasts LISP does return a value.
+
+
+A simple in JAVA/C K&R type syntax style would look something like this:
+
+    if( (x != y) && (x > y) )
+    then
+    {
+      x = x / ( x - y);
+    }
+    else
+    {
+      x = x - ( x * y);
+    }
+
+Or if you prefer the condensed style:
+
+    if( (x != y) && (x > y) )
+    then { x = x / ( x - y); }
+    else { x = x - ( x * y);}
+
+
+With SKILL you can also use the Infix notation of above to make it even easier but you must be very careful with whitespace and use a ton of curly brackets
+which are actually a shorthand abbreviation for the progn() function. The trouble with this syntax is that you're actually adding unnecessary progn functions that must be evaluated and hence, adding unnecessary processor instructions resulting is slower code.
+
+    if( { { x != y } && { x > y } }
+    then
+      x =  x / { x - y }
+    else
+      x = x - { x * y }
+    )
+
+The "then" and "else" are actually optional in this case since "if" is actually a function rather than a logical operator. Give it two args it's an IF-THEN, but give it three args it is now an IF-THEN-ELSE.
+
+The same thing in typical, standard "long hand" LISP syntax would look like:
+
+    (if (and (nequal x y) (greaterp x y))
+      (setq x (quotient x (minus x y)))
+        (setq x (difference x (times x y))))
+
+Standard LISP syntax is painful for people who don't know it well.
+
+If you're feeling friendly, you could write it this way in LISP to make it a bit easier on the non-LISP-indoctrinated and still maintain basic LISP syntax
+
+   (if (and (nequal x y) (greater x y))
+   then
+     (setq x (quotient x (minus x y)))
+   else
+     (setq x (difference x (times x y)))
+   )
+
+Or even something more friendly like below when addtional evaluation is it's not in a performance impacting loop:
+
+    (if (and { x != y } { x > y })
+    then
+      (setq x {x / { x - y }})
+    else
+      (setq x {x - { x * y }})
+    )
+
+
+If you're feeling mean, do it in "short hand" LISP syntax:
+
+    (if (&& (!= x y) (> x y)) (= x (/ x (- x y))) (= x (- (* x y))))
+
+If you're outright malicious, a "very short hand" LISP syntax is possible:
+
+    (?(&&:!:> x y)(=:/:- x y)(=:-:* x y))
+
+You can very easily do equally maligned things in PERL and C and other languages but at least now, Manu, you can see why I said one can make source code look like "line noise" if you really want to do it. And yes, some jerks do it intentionally as a "job security" method if you fail to do careful code reviews on their work.
+
+Frighteningly enough, I can read/comprehend all of them reasonable well but personally, I tend to use the "friendly" syntax most of the time because it does not require extra, unnecessary evaluation and is still fairly readable for those who do not know the language. More importantly it's not embarrassing. There are few things more embarrassing in life than looking at some new chunk of code and trying to figure out what the f-heck the jackass who wrote it was actually trying to do under all that "cool" looking syntax... -only to realize, after a few minutes, that I was said jackass. 
+

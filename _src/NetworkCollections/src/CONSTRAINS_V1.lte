@@ -1,0 +1,1396 @@
+ 
+ 
+FILE-INFO  CONSTRAINS INPUT SYSTEM V1.0 DATA FILE
+FILE-INFO  TEST VERSION 1.4
+FILE-INFO  USE FOR HUAWEI CAD
+FILE-INFO  If you find any problems about this program,please
+FILE-INFO  contact with Liguangsheng 24445.TEL:50574
+FILE-INFO  If you find any problems about the data value,please
+FILE-INFO  contact with Liangweining 16835.TEL:50571
+FILE-INFO  2002 08 27
+ 
+ 
+NOTES      1 ALL OF THE RED AND BLUE WORD CAN NOT BE CHANGED IN EVERYWHERE
+NOTES      2 EVERY LINE MUST BIGIN WITH EXIST RED AND BLUE WORD
+NOTES      3 ENABLED CHARACTER IS: ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 :.,>
+NOTES      4 THE CHARACTER OF THE GREEN NUMBER MUST WITHIN: 1234567890.
+NOTES      4 EVERY PAGE MUST BIGIN WITH KEYWORD:TECHNICS
+NOTES      5 KEYWORD:END MUST BE FINED AT AFTER THE LAST LINE OF THE LAST PAG
+NOTES
+NOTES                                       HUAWEI CAD
+NOTES                                       LIGUANGSHENG 24445
+NOTES                                       2002 05 01
+NOTES
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TECHNICS              REFLOW TECHNICS 1.0
+TECHNICS-INFO         TEST VERSION 1.0
+TECHNICS-INFO         Release at 2002-06-10
+TECHNICS-INFO         Check by HUAWEI CAD Liangweining 16835
+TECHNICS-INFO         This technics datasheet only be used for
+TECHNICS-INFO         CONSTRAINS INPUT SYSTEMS V1.0
+ 
+ 
+RULE-TYPE             CONSTRAINTS
+PLANE-ISLANDS              0
+SOLDER-ALIGNMENT           0
+SOLDER-SOLDER              4
+ 
+ 
+ 
+AREA                    DEFAULT
+AREA-INFO             This data is used for COMMON AREA in the PCB
+AREA-INFO             This technics datasheet only be used for
+AREA-INFO             CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE               SPACING
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                       15         15         15         15         15         15
+PIN-SMD                       14         14         14         14         14         14
+PIN-TPIN                      15         15         15         15         15         15
+PIN-VIA                        8          8          8          8          8          8
+PIN-TVIA                      13         13         13         13         13         13
+PIN-BBVIA                      8          8          8          8          8          8
+PIN-BONDPAD                    8          8          8          8          8          8
+PIN-LINE                       8          7          8          7          5          5
+PIN-SHAPE                     10          7         10          7         10          6
+SMD-SMD                        7          7          7          7          7          7
+SMD-TPIN                      14         14         14         14         14         14
+SMD-VIA                        8          7          8          7          8          7
+SMD-TVIA                       8          7         12         12          8          8
+SMD-BBVIA                      8          8          8          8          8          8
+SMD-BONDPAD                    8          8          8          8          8          8
+SMD-LINE                       8          7          8          7          8          8
+SMD-SHAPE                     10          7         10          7         10          7
+TPIN-TPIN                     18         18         18         18         18         18
+TPIN-VIA                       8          7          8          7          7          7
+TPIN-TVIA                      8          7         38         18          7          7
+TPIN-BBVIA                     8          8          8          8          8          8
+TPIN-BONDPAD                   8          8          8          8          8          8
+TPIN-LINE                      8          7          8          8          8          8
+TPIN-SHAPE                    10          7         12          8         10          6
+VIA-VIA                        8          5          8          5          8          5
+VIA-TVIA                       8          5         12          8          8          5
+VIA-BBVIA                      8          8          8          8          8          8
+VIA-BONDPAD                    8          8          8          8          8          8
+VIA-LINE                       8          5          7          5          6          5
+VIA-SHAPE                     10          6         10          6         10          6
+TVIA-TVIA                      8          8         38         18          8          8
+TVIA-BBVIA                     8          8          8          8          8          8
+TVIA-BONDPAD                   8          8          8          8          8          8
+TVIA-LINE                      8          5          8          8          6          5
+TVIA-SHAPE                    10          6         12          8         10          6
+BBVIA-BBVIA                    8          5          8          5          8          5
+BBVIA-BONDPAD                  8          8          8          8          8          8
+BBVIA-LINE                     8          5          8          5          8          5
+BBVIA-SHAPE                    8          6          8          6          8          6
+BONDPAD-BONDPAD                8          8          8          8          8          8
+BONDPAD-LINE                   8          8          8          8          8          8
+BONDPAD-SHAPE                  8          8          8          8          8          8
+LINE-LINE                      8          5          8          5          6        4.5
+LINE-SHAPE                    10          6         10          6         10          6
+SHAPE-SHAPE                   10          6         10          6         10          6
+RULE-TYPE              PHYSICAL
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                     6          5          6          5          6          4
+VIA-TYPE1.6-TYPE        VIA12-GEN  TVIA12-32
+VIA-TYPE1.6-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE          VIA12-GEN  TVIA12-32
+VIA-TYPE2-MIN           VIA10-GEN  TVIA10-32
+VIA-TYPE2.5-TYPE        VIA12-GEN  TVIA12-32
+VIA-TYPE2.5-MIN         VIA12-GEN  TVIA12-32
+VIA-TYPE3-TYPE          VIA16-GEN  TVIA16-32
+VIA-TYPE3-MIN           VIA12-GEN  TVIA12-32
+ 
+ 
+ 
+AREA                  BGA-1.27MM
+AREA-INFO             This data is used for THE BGA-1.27MM AREA in the PCB
+AREA-INFO             This technics datasheet only be used for
+AREA-INFO             CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE               SPACING
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                       15         15         15         15         15         15
+PIN-SMD                       14         14         14         14         14         14
+PIN-TPIN                      15         15         15         15         15         15
+PIN-VIA                        8          8          8          8          8          8
+PIN-TVIA                      13         13         13         13         13         13
+PIN-BBVIA                      8          8          8          8          8          8
+PIN-BONDPAD                    8          8          8          8          8          8
+PIN-LINE                       7          7          7          7          6       4.25
+PIN-SHAPE                      8          6          8          6          8          6
+SMD-SMD                        7          7          7          7          7          7
+SMD-TPIN                      14         14         14         14         14         14
+SMD-VIA                        8          7          8          7          8          7
+SMD-TVIA                       8          7         12         12          8          8
+SMD-BBVIA                      8          8          8          8          8          8
+SMD-BONDPAD                    8          8          8          8          8          8
+SMD-LINE                       6          5          6          5          6          5
+SMD-SHAPE                      8          6          8          6          8          6
+TPIN-TPIN                     18         18         18         18         18         18
+TPIN-VIA                       8          7          8          7          7          7
+TPIN-TVIA                      8          7         38         18          7          7
+TPIN-BBVIA                     8          8          8          8          8          8
+TPIN-BONDPAD                   8          8          8          8          8          8
+TPIN-LINE                      7          7          8          8          6       4.25
+TPIN-SHAPE                     8          6         12          8          8          6
+VIA-VIA                        8          5          8          5          8          5
+VIA-TVIA                       8          5         12          8          8          5
+VIA-BBVIA                      8          8          8          8          8          8
+VIA-BONDPAD                    8          8          8          8          8          8
+VIA-LINE                       6          5          6          5          6       4.25
+VIA-SHAPE                      8          6          8          6          8          6
+TVIA-TVIA                      8          8         38         18          8          8
+TVIA-BBVIA                     8          8          8          8          8          8
+TVIA-BONDPAD                   8          8          8          8          8          8
+TVIA-LINE                      6          5          8          8          6       4.25
+TVIA-SHAPE                     8          6         12          8          8          6
+BBVIA-BBVIA                    8          5          8          5          8          5
+BBVIA-BONDPAD                  8          8          8          8          8          8
+BBVIA-LINE                     8          5          8          5          8          5
+BBVIA-SHAPE                    8          8          8          8          8          8
+BONDPAD-BONDPAD                8          8          8          8          8          8
+BONDPAD-LINE                   8          8          8          8          8          8
+BONDPAD-SHAPE                  8          8          8          8          8          8
+LINE-LINE                      6          5          6          5          6       4.25
+LINE-SHAPE                     8          6          8          6          8          6
+SHAPE-SHAPE                   10          6         10          6         10          6
+RULE-TYPE              PHYSICAL
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                     6          5          6          5          6          4
+VIA-TYPE1.6-TYPE        VIA12-BGA  TVIA12-32
+VIA-TYPE1.6-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE          VIA12-BGA  TVIA12-32
+VIA-TYPE2-MIN           VIA10-BGA  TVIA10-32
+VIA-TYPE2.5-TYPE        VIA12-BGA  TVIA12-32
+VIA-TYPE2.5-MIN         VIA12-BGA  TVIA12-32
+VIA-TYPE3-TYPE          VIA12-BGA  TVIA16-32
+VIA-TYPE3-MIN           VIA12-BGA  TVIA12-32
+ 
+ 
+ 
+AREA                   BGA-1.0MM
+AREA-INFO             This data is used for THE BGA-1.0MM AREA in the PCB
+AREA-INFO             This technics datasheet only be used for
+AREA-INFO             CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE               SPACING
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                       15         15         15         15         15         15
+PIN-SMD                       14         14         14         14         14         14
+PIN-TPIN                      15         15         15         15         15         15
+PIN-VIA                        8          5          8          5          8          5
+PIN-TVIA                      13         13         13         13         13         13
+PIN-BBVIA                      8          8          8          8          8          8
+PIN-BONDPAD                    8          8          8          8          8          8
+PIN-LINE                       7          5          7          5          5       4.25
+PIN-SHAPE                      8          7          8          7          6          6
+SMD-SMD                        7          7          7          7          7          7
+SMD-TPIN                      14         14         14         14         14         14
+SMD-VIA                        6          5          7          7          6          5
+SMD-TVIA                       6          5         12         12          6          5
+SMD-BBVIA                      8          8          8          8          8          8
+SMD-BONDPAD                    8          8          8          8          8          8
+SMD-LINE                       6          5          6          5          6          6
+SMD-SHAPE                      8          7          8          7          8          7
+TPIN-TPIN                     18         18         18         18         18         18
+TPIN-VIA                       8          7          8          7          7          7
+TPIN-TVIA                      8          7         38         18          7          7
+TPIN-BBVIA                     8          8          8          8          8          8
+TPIN-BONDPAD                   8          8          8          8          8          8
+TPIN-LINE                      7          7          8          8          6       4.25
+TPIN-SHAPE                     8          7         12          8          8          6
+VIA-VIA                        8          5          8          5          8          5
+VIA-TVIA                       8          5         12          8          8          5
+VIA-BBVIA                      8          8          8          8          8          8
+VIA-BONDPAD                    8          8          8          8          8          8
+VIA-LINE                     5.5        4.5        5.5        4.5        5.5       4.25
+VIA-SHAPE                      6          6          6          6          6          6
+TVIA-TVIA                      8          8         38         18          8          8
+TVIA-BBVIA                     8          8          8          8          8          8
+TVIA-BONDPAD                   8          8          8          8          8          8
+TVIA-LINE                    5.5        4.5          8          8        5.5       4.25
+TVIA-SHAPE                     8          6         12          8          6          6
+BBVIA-BBVIA                    8          5          8          5          8          5
+BBVIA-BONDPAD                  8          8          8          8          8          8
+BBVIA-LINE                     8          5          8          5          8          5
+BBVIA-SHAPE                    8          8          8          8          8          8
+BONDPAD-BONDPAD                8          8          8          8          8          8
+BONDPAD-LINE                   8          8          8          8          8          8
+BONDPAD-SHAPE                  8          8          8          8          8          8
+LINE-LINE                    5.5        4.5        5.5        4.5        5.5          4
+LINE-SHAPE                     8          6          8          6          6          6
+SHAPE-SHAPE                   10          6         10          6         10          6
+RULE-TYPE              PHYSICAL
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                     6          5          6          5          6          4
+VIA-TYPE1.6-TYPE        VIA10-BGA  TVIA10-32
+VIA-TYPE1.6-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE          VIA10-BGA  TVIA10-32
+VIA-TYPE2-MIN            VIA8-BGA  ICT-SMD32
+VIA-TYPE2.5-TYPE        VIA10-BGA  TVIA10-32
+VIA-TYPE2.5-MIN         VIA10-BGA  TVIA10-32
+VIA-TYPE3-TYPE
+VIA-TYPE3-MIN
+ 
+ 
+ 
+AREA                   BGA-0.8MM
+AREA-INFO             This data is used for THE BGA-0.8MM AREA in the PCB
+AREA-INFO             This technics datasheet only be used for
+AREA-INFO             CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE               SPACING
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                       15         15         15         15         15         15
+PIN-SMD                       14         14         14         14         14         14
+PIN-TPIN                      15         15         15         15         15         15
+PIN-VIA                        8          5          8          5          8          5
+PIN-TVIA                      13         13         13         13         13         13
+PIN-BBVIA                      8          8          8          8          8          8
+PIN-BONDPAD                    8          8          8          8          8          8
+PIN-LINE                       7          7          7          7        5.5        4.5
+PIN-SHAPE                      7          7          7          7          6          5
+SMD-SMD                        7          7          7          7          7          7
+SMD-TPIN                      14         14         14         14         14         14
+SMD-VIA                        5        4.5          7          7          5        4.5
+SMD-TVIA                       6          5         12         12          6          5
+SMD-BBVIA                      8          8          8          8          8          8
+SMD-BONDPAD                    8          8          8          8          8          8
+SMD-LINE                     5.2        4.5        5.2        4.5        5.2        4.5
+SMD-SHAPE                      7          7          7          7          7          7
+TPIN-TPIN                     18         18         18         18         18         18
+TPIN-VIA                       8          7          8          7          7          7
+TPIN-TVIA                      8          7         38         18          7          7
+TPIN-BBVIA                     8          8          8          8          8          8
+TPIN-BONDPAD                   8          8          8          8          8          8
+TPIN-LINE                      7          7          8          8        5.5        4.5
+TPIN-SHAPE                     7          7         12          8          6          5
+VIA-VIA                        8          5          8          5          8          5
+VIA-TVIA                       8          5         12          8          8          5
+VIA-BBVIA                      8          8          8          8          8          8
+VIA-BONDPAD                    8          8          8          8          8          8
+VIA-LINE                    4.24       4.24       4.24       4.24       4.24       4.24
+VIA-SHAPE                      6          5          6          5          6          5
+TVIA-TVIA                      8          8         38         18          8          8
+TVIA-BBVIA                     8          8          8          8          8          8
+TVIA-BONDPAD                   8          8          8          8          8          8
+TVIA-LINE                   4.24       4.24          8          8       4.24       4.24
+TVIA-SHAPE                     6          5         12          8          6          5
+BBVIA-BBVIA                    8          5          8          5          8          5
+BBVIA-BONDPAD                  8          8          8          8          8          8
+BBVIA-LINE                     8          5          8          5          8          5
+BBVIA-SHAPE                    6          5          6          5          6          5
+BONDPAD-BONDPAD                8          8          8          8          8          8
+BONDPAD-LINE                   8          8          8          8          8          8
+BONDPAD-SHAPE                  8          8          8          8          8          8
+LINE-LINE                    5.5        4.5        5.5        4.5        5.5        4.5
+LINE-SHAPE                     6          5          6          5          6          5
+SHAPE-SHAPE                   10          5         10          5         10          5
+RULE-TYPE              PHYSICAL
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                     5          5          5          5          5          4
+VIA-TYPE1.6-TYPE         VIA8-BGA  ICT-SMD32
+VIA-TYPE1.6-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE           VIA8-BGA  ICT-SMD32
+VIA-TYPE2-MIN            VIA8-BGA  ICT-SMD32
+VIA-TYPE2.5-TYPE
+VIA-TYPE2.5-MIN
+VIA-TYPE3-TYPE
+VIA-TYPE3-MIN
+ 
+ 
+ 
+AREA                  BGA-0.8MM-3ROW
+AREA-INFO             This data is used for THE BGA-0.8MM AREA in the PCB
+AREA-INFO             which only has 3 row signal pins should be routed.
+AREA-INFO             This technics datasheet only be used for
+AREA-INFO             CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE               SPACING
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                       15         15         15         15         15         15
+PIN-SMD                       14         14         14         14         14         14
+PIN-TPIN                      15         15         15         15         15         15
+PIN-VIA                        8          5          8          5          8          5
+PIN-TVIA                      13         13         13         13         13         13
+PIN-BBVIA                      8          8          8          8          8          8
+PIN-BONDPAD                    8          8          8          8          8          8
+PIN-LINE                       7          7          7          7        5.5        4.5
+PIN-SHAPE                      7          7          7          7          6          5
+SMD-SMD                        7          7          7          7          7          7
+SMD-TPIN                      14         14         14         14         14         14
+SMD-VIA                        5        4.5          7          7          5        4.5
+SMD-TVIA                       6          5         12         12          6          5
+SMD-BBVIA                      8          8          8          8          8          8
+SMD-BONDPAD                    8          8          8          8          8          8
+SMD-LINE                     5.2        4.5        5.2        4.5        5.2        4.5
+SMD-SHAPE                      7          7          7          7          7          7
+TPIN-TPIN                     18         18         18         18         18         18
+TPIN-VIA                       8          7          8          7          7          7
+TPIN-TVIA                      8          7         38         18          7          7
+TPIN-BBVIA                     8          8          8          8          8          8
+TPIN-BONDPAD                   8          8          8          8          8          8
+TPIN-LINE                      7          7          8          8        5.5        4.5
+TPIN-SHAPE                     7          7         12          8          6          5
+VIA-VIA                        8          5          8          5          8          5
+VIA-TVIA                       8          5         12          8          8          5
+VIA-BBVIA                      8          8          8          8          8          8
+VIA-BONDPAD                    8          8          8          8          8          8
+VIA-LINE                       7       4.24          7       4.24          7       4.24
+VIA-SHAPE                      6          5          6          5          6          5
+TVIA-TVIA                      8          8         38         18          8          8
+TVIA-BBVIA                     8          8          8          8          8          8
+TVIA-BONDPAD                   8          8          8          8          8          8
+TVIA-LINE                      7       4.24          8          8          7       4.24
+TVIA-SHAPE                     6          5         12          8          6          5
+BBVIA-BBVIA                    8          5          8          5          8          5
+BBVIA-BONDPAD                  8          8          8          8          8          8
+BBVIA-LINE                     8          5          8          5          8          5
+BBVIA-SHAPE                    6          5          6          5          6          5
+BONDPAD-BONDPAD                8          8          8          8          8          8
+BONDPAD-LINE                   8          8          8          8          8          8
+BONDPAD-SHAPE                  8          8          8          8          8          8
+LINE-LINE                    5.5        4.5        5.5        4.5        5.5        4.5
+LINE-SHAPE                     6          5          6          5          6          5
+SHAPE-SHAPE                   10          5         10          5         10          5
+RULE-TYPE              PHYSICAL
+LAYER                     TOP                 BOTTOM                 INNER
+TYPE-MIN                     TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                     5          5          5          5          5          4
+VIA-TYPE1.6-TYPE         VIA8-BGA  ICT-SMD32
+VIA-TYPE1.6-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE           VIA8-BGA  ICT-SMD32
+VIA-TYPE2-MIN            VIA8-BGA  ICT-SMD32
+VIA-TYPE2.5-TYPE
+VIA-TYPE2.5-MIN
+VIA-TYPE3-TYPE
+VIA-TYPE3-MIN
+ 
+TECHNICS            WAVE_FLOW TECHNICS 1.0
+TECHNICS-INFO       TEST VERSION 1.0
+TECHNICS-INFO       Release at 2002-06-10
+TECHNICS-INFO       Check by HUAWEI CAD Liangweining 16835
+TECHNICS-INFO       This technics datasheet only be used for
+TECHNICS-INFO       CONSTRAINS INPUT SYSTEMS V1.0
+ 
+ 
+RULE-TYPE           CONSTRAINTS
+PLANE-ISLANDS            0
+SOLDER-ALIGNMENT         0
+SOLDER-SOLDER            4
+ 
+ 
+ 
+AREA                  DEFAULT
+AREA-INFO           This data is used for COMMON AREA in the PCB
+AREA-INFO           This technics datasheet only be used for
+AREA-INFO           CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE             SPACING
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                     15         15         15         15         15         15
+PIN-SMD                     14         14         50         50         14         14
+PIN-TPIN                    15         15         15         15         15         15
+PIN-VIA                      8          8         20         20          8          8
+PIN-TVIA                    13         13         30         24         13         13
+PIN-BBVIA                    8          8          8          8          8          8
+PIN-BONDPAD                  8          8          8          8          8          8
+PIN-LINE                     8          7          8          7          5          5
+PIN-SHAPE                   10          7         10          7         10          6
+SMD-SMD                      7          7         30         30          7          7
+SMD-TPIN                    14         14         50         50         14         14
+SMD-VIA                      8          6         20         20          8          8
+SMD-TVIA                     8          6         24         24          8          8
+SMD-BBVIA                    8          8          8          8          8          8
+SMD-BONDPAD                  8          8          8          8          8          8
+SMD-LINE                     8          7          8          7          8          8
+SMD-SHAPE                   10          7         10          7         10          7
+TPIN-TPIN                   18         18         18         18         18         18
+TPIN-VIA                     8          7         20         20          7          7
+TPIN-TVIA                    8          7         38         24          7          7
+TPIN-BBVIA                   8          8          8          8          8          8
+TPIN-BONDPAD                 8          8          8          8          8          8
+TPIN-LINE                    8          7          8          8          8          8
+TPIN-SHAPE                  10          7         12          8         10          6
+VIA-VIA                      8          5          8          5          8          5
+VIA-TVIA                     8          5         12          8          8          5
+VIA-BBVIA                    8          8          8          8          8          8
+VIA-BONDPAD                  8          8          8          8          8          8
+VIA-LINE                     8          5          7          5          6          5
+VIA-SHAPE                   10          6         10          6         10          6
+TVIA-TVIA                    8          8         38         24          8          8
+TVIA-BBVIA                   8          8          8          8          8          8
+TVIA-BONDPAD                 8          8          8          8          8          8
+TVIA-LINE                    8          5          8          8          6          5
+TVIA-SHAPE                  10          6         12          8         10          6
+BBVIA-BBVIA                  8          6          8          6          8          6
+BBVIA-BONDPAD                8          8          8          8          8          8
+BBVIA-LINE                   8          6          8          6          8          6
+BBVIA-SHAPE                 10          6         10          6         10          6
+BONDPAD-BONDPAD              8          8          8          8          8          8
+BONDPAD-LINE                 8          8          8          8          8          8
+BONDPAD-SHAPE                8          8          8          8          8          8
+LINE-LINE                    8          5          8          5          6        4.5
+LINE-SHAPE                  10          6         10          6         10          6
+SHAPE-SHAPE                 10          6         10          6         10          6
+RULE-TYPE            PHYSICAL
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                   6          5          6          5          6          4
+VIA-TYPE1.6-TYPE      VIA12-GEN  TVIA12-32
+VIA-TYPE1.6-MIN        VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE        VIA12-GEN  TVIA12-32
+VIA-TYPE2-MIN         VIA10-GEN  TVIA10-32
+VIA-TYPE2.5-TYPE      VIA12-GEN  TVIA12-32
+VIA-TYPE2.5-MIN       VIA12-GEN  TVIA12-32
+VIA-TYPE3-TYPE        VIA16-GEN  TVIA16-32
+VIA-TYPE3-MIN         VIA12-GEN  TVIA12-32
+ 
+ 
+ 
+AREA                BGA-1.27MM
+AREA-INFO           This data is used for THE BGA-1.27MM AREA in the PCB
+AREA-INFO           This technics datasheet only be used for
+AREA-INFO           CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE             SPACING
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                     15         15         15         15         15         15
+PIN-SMD                     14         14         50         50         14         14
+PIN-TPIN                    15         15         15         15         15         15
+PIN-VIA                      8          8         20         20          8          8
+PIN-TVIA                    13         13         30         24         13         13
+PIN-BBVIA                    8          8          8          8          8          8
+PIN-BONDPAD                  8          8          8          8          8          8
+PIN-LINE                     7          7          7          7          6       4.25
+PIN-SHAPE                    8          6          8          6          8          6
+SMD-SMD                      7          7         30         30          7          7
+SMD-TPIN                    14         14         50         50         14         14
+SMD-VIA                      8          6          8          7          8          6
+SMD-TVIA                     8          6         24         24          8          8
+SMD-BBVIA                    8          8          8          8          8          8
+SMD-BONDPAD                  8          8          8          8          8          8
+SMD-LINE                     8          7          8          7          8          8
+SMD-SHAPE                    8          6          8          6          8          6
+TPIN-TPIN                   18         18         18         18         18         18
+TPIN-VIA                     8          7         20         20          7          7
+TPIN-TVIA                    8          7         38         24          7          7
+TPIN-BBVIA                   8          8          8          8          8          8
+TPIN-BONDPAD                 8          8          8          8          8          8
+TPIN-LINE                    7          7          8          8          6       4.25
+TPIN-SHAPE                   8          6         12          8          8          6
+VIA-VIA                      8          5          8          5          8          5
+VIA-TVIA                     8          5         12          8          8          5
+VIA-BBVIA                    8          8          8          8          8          8
+VIA-BONDPAD                  8          8          8          8          8          8
+VIA-LINE                     6          5          6          5          6       4.25
+VIA-SHAPE                    8          6          8          6          8          6
+TVIA-TVIA                    8          8         38         24          8          8
+TVIA-BBVIA                   8          8          8          8          8          8
+TVIA-BONDPAD                 8          8          8          8          8          8
+TVIA-LINE                    6          5          8          8          6       4.25
+TVIA-SHAPE                   8          6         12          8          8          6
+BBVIA-BBVIA                  8          6          8          6          8          6
+BBVIA-BONDPAD                8          8          8          8          8          8
+BBVIA-LINE                   8          6          8          6          8          6
+BBVIA-SHAPE                  8          8          8          8          8          8
+BONDPAD-BONDPAD              8          8          8          8          8          8
+BONDPAD-LINE                 8          8          8          8          8          8
+BONDPAD-SHAPE                8          8          8          8          8          8
+LINE-LINE                    6          5          6          5          6       4.25
+LINE-SHAPE                   8          6          8          6          8          6
+SHAPE-SHAPE                 10          6         10          6         10          6
+RULE-TYPE            PHYSICAL
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                   6          5          6          5          6          4
+VIA-TYPE1.6-TYPE      VIA12-BGA  TVIA12-32
+VIA-TYPE1.6-MIN        VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE        VIA12-BGA  TVIA12-32
+VIA-TYPE2-MIN         VIA10-BGA  TVIA10-32
+VIA-TYPE2.5-TYPE      VIA12-BGA  TVIA12-32
+VIA-TYPE2.5-MIN       VIA12-BGA  TVIA12-32
+VIA-TYPE3-TYPE        VIA12-BGA  TVIA16-32
+VIA-TYPE3-MIN         VIA12-BGA  TVIA12-32
+ 
+ 
+ 
+AREA                 BGA-1.0MM
+AREA-INFO           This data is used for THE BGA-1.0MM AREA in the PCB
+AREA-INFO           This technics datasheet only be used for
+AREA-INFO           CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE             SPACING
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                     15         15         15         15         15         15
+PIN-SMD                     14         14         50         50         14         14
+PIN-TPIN                    15         15         15         15         15         15
+PIN-VIA                      8          5         20         20          8          5
+PIN-TVIA                    13         13         30         24         13         13
+PIN-BBVIA                    8          8          8          8          8          8
+PIN-BONDPAD                  8          8          8          8          8          8
+PIN-LINE                     7          7          7          7        5.5          4
+PIN-SHAPE                    8          7          8          7          6          6
+SMD-SMD                      7          7         30         30          7          7
+SMD-TPIN                    14         14         50         50         14         14
+SMD-VIA                      6          5          8          7          6          5
+SMD-TVIA                     6          5         24         24          6          5
+SMD-BBVIA                    8          8          8          8          8          8
+SMD-BONDPAD                  8          8          8          8          8          8
+SMD-LINE                     6          5          6          5          6          6
+SMD-SHAPE                    8          7          8          7          8          6
+TPIN-TPIN                   18         18         18         18         18         18
+TPIN-VIA                     8          7         20         20          7          7
+TPIN-TVIA                    8          7         38         24          7          7
+TPIN-BBVIA                   8          8          8          8          8          8
+TPIN-BONDPAD                 8          8          8          8          8          8
+TPIN-LINE                    7          7          8          8        5.5       4.25
+TPIN-SHAPE                   8          7         12          8          8          6
+VIA-VIA                      8          5          8          5          8          5
+VIA-TVIA                     8          5         12          8          8          5
+VIA-BBVIA                    8          8          8          8          8          8
+VIA-BONDPAD                  8          8          8          8          8          8
+VIA-LINE                   5.5          4        5.5          4        5.5       4.25
+VIA-SHAPE                    6          6          6          6          6          6
+TVIA-TVIA                    8          8         38         24          8          8
+TVIA-BBVIA                   8          8          8          8          8          8
+TVIA-BONDPAD                 8          8          8          8          8          8
+TVIA-LINE                  5.5          4          8          8        5.5       4.25
+TVIA-SHAPE                   8          6         12          8          6          6
+BBVIA-BBVIA                  8          6          8          6          8          6
+BBVIA-BONDPAD                8          8          8          8          8          8
+BBVIA-LINE                   8          6          8          6          8          6
+BBVIA-SHAPE                  8          6          8          6          6          6
+BONDPAD-BONDPAD              8          8          8          8          8          8
+BONDPAD-LINE                 8          8          8          8          8          8
+BONDPAD-SHAPE                8          8          8          8          8          8
+LINE-LINE                  5.5        4.5        5.5        4.5        5.5          4
+LINE-SHAPE                   8          6          8          6          6          6
+SHAPE-SHAPE                 10          6         10          6         10          6
+RULE-TYPE            PHYSICAL
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                   6          5          6          5          6          4
+VIA-TYPE1.6-TYPE      VIA10-BGA  TVIA10-32
+VIA-TYPE1.6-MIN        VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE        VIA10-BGA  TVIA10-32
+VIA-TYPE2-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2.5-TYPE      VIA10-BGA  TVIA10-32
+VIA-TYPE2.5-MIN       VIA10-BGA  TVIA10-32
+VIA-TYPE3-TYPE
+VIA-TYPE3-MIN
+ 
+ 
+ 
+AREA                 BGA-0.8MM
+AREA-INFO           This data is used for THE BGA-0.8MM AREA in the PCB
+AREA-INFO           This technics datasheet only be used for
+AREA-INFO           CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE             SPACING
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                     15         15         15         15         15         15
+PIN-SMD                     14         14         50         50         14         14
+PIN-TPIN                    15         15         15         15         15         15
+PIN-VIA                      8          5         20         20          8          5
+PIN-TVIA                    13         13         30         24         13         13
+PIN-BBVIA                    8          8          8          8          8          8
+PIN-BONDPAD                  8          8          8          8          8          8
+PIN-LINE                     7          7          7          7        5.5        4.5
+PIN-SHAPE                    7          7          7          7          6          5
+SMD-SMD                      7          7         30         30          7          7
+SMD-TPIN                    14         14         50         50         14         14
+SMD-VIA                      5        4.5          8          7          5        4.5
+SMD-TVIA                     6          5         24         24          6          5
+SMD-BBVIA                    8          8          8          8          8          8
+SMD-BONDPAD                  8          8          8          8          8          8
+SMD-LINE                   5.2        4.5        5.2        4.5        5.2        4.5
+SMD-SHAPE                    7          7          7          7          7          7
+TPIN-TPIN                   18         18         18         18         18         18
+TPIN-VIA                     8          7         20         20          7          7
+TPIN-TVIA                    8          7         38         24          7          7
+TPIN-BBVIA                   8          8          8          8          8          8
+TPIN-BONDPAD                 8          8          8          8          8          8
+TPIN-LINE                    7          7          8          8        5.5        4.5
+TPIN-SHAPE                   7          7         12          8          6          5
+VIA-VIA                      8          5          8          5          8          5
+VIA-TVIA                     8          5         12          8          8          5
+VIA-BBVIA                    8          8          8          8          8          8
+VIA-BONDPAD                  8          8          8          8          8          8
+VIA-LINE                  4.24       4.24       4.24       4.24       4.24       4.24
+VIA-SHAPE                    6          5          6          5          6          5
+TVIA-TVIA                    8          8         38         24          8          8
+TVIA-BBVIA                   8          8          8          8          8          8
+TVIA-BONDPAD                 8          8          8          8          8          8
+TVIA-LINE                 4.24       4.24          8          8       4.24       4.24
+TVIA-SHAPE                   6          5         12          8          6          5
+BBVIA-BBVIA                  8          6          8          6          8          6
+BBVIA-BONDPAD                8          8          8          8          8          8
+BBVIA-LINE                   8          6          8          6          8          6
+BBVIA-SHAPE                  6          5          6          5          6          5
+BONDPAD-BONDPAD              8          8          8          8          8          8
+BONDPAD-LINE                 8          8          8          8          8          8
+BONDPAD-SHAPE                8          8          8          8          8          8
+LINE-LINE                  5.5        4.5        5.5        4.5        5.5        4.5
+LINE-SHAPE                   6          5          6          5          6          5
+SHAPE-SHAPE                 10          5         10          5         10          5
+RULE-TYPE            PHYSICAL
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                   5          5          5          5          5          4
+VIA-TYPE1.6-TYPE       VIA8-BGA  ICT-SMD32
+VIA-TYPE1.6-MIN        VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE         VIA8-BGA  ICT-SMD32
+VIA-TYPE2-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2.5-TYPE
+VIA-TYPE2.5-MIN
+VIA-TYPE3-TYPE
+VIA-TYPE3-MIN
+ 
+ 
+ 
+AREA                BGA-0.8MM-3ROW
+AREA-INFO           This data is used for THE BGA-0.8MM AREA in the PCB
+AREA-INFO           which only has 3 row signal pins should be routed.
+AREA-INFO           This technics datasheet only be used for
+AREA-INFO           CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE             SPACING
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                     15         15         15         15         15         15
+PIN-SMD                     14         14         50         50         14         14
+PIN-TPIN                    15         15         15         15         15         15
+PIN-VIA                      8          5         20         20          8          5
+PIN-TVIA                    13         13         30         24         13         13
+PIN-BBVIA                    8          8          8          8          8          8
+PIN-BONDPAD                  8          8          8          8          8          8
+PIN-LINE                     7          7          7          7        5.5        4.5
+PIN-SHAPE                    7          7          7          7          6          5
+SMD-SMD                      7          7         30         30          7          7
+SMD-TPIN                    14         14         50         50         14         14
+SMD-VIA                      5        4.5          8          7          5        4.5
+SMD-TVIA                     6          5         24         24          6          5
+SMD-BBVIA                    8          8          8          8          8          8
+SMD-BONDPAD                  8          8          8          8          8          8
+SMD-LINE                   5.2        4.5        5.2        4.5        5.2        4.5
+SMD-SHAPE                    7          7          7          7          7          7
+TPIN-TPIN                   18         18         18         18         18         18
+TPIN-VIA                     8          7         20         20          7          7
+TPIN-TVIA                    8          7         38         24          7          7
+TPIN-BBVIA                   8          8          8          8          8          8
+TPIN-BONDPAD                 8          8          8          8          8          8
+TPIN-LINE                    7          7          8          8        5.5        4.5
+TPIN-SHAPE                   7          7         12          8          6          5
+VIA-VIA                      8          5          8          5          8          5
+VIA-TVIA                     8          5         12          8          8          5
+VIA-BBVIA                    8          8          8          8          8          8
+VIA-BONDPAD                  8          8          8          8          8          8
+VIA-LINE                     7       4.24          7       4.24          7       4.24
+VIA-SHAPE                    6          5          6          5          6          5
+TVIA-TVIA                    8          8         38         24          8          8
+TVIA-BBVIA                   8          8          8          8          8          8
+TVIA-BONDPAD                 8          8          8          8          8          8
+TVIA-LINE                    7       4.24          8          8          7       4.24
+TVIA-SHAPE                   6          5         12          8          6          5
+BBVIA-BBVIA                  8          6          8          6          8          6
+BBVIA-BONDPAD                8          8          8          8          8          8
+BBVIA-LINE                   8          6          8          6          8          6
+BBVIA-SHAPE                  6          5          6          5          6          5
+BONDPAD-BONDPAD              8          8          8          8          8          8
+BONDPAD-LINE                 8          8          8          8          8          8
+BONDPAD-SHAPE                8          8          8          8          8          8
+LINE-LINE                  5.5        4.5        5.5        4.5        5.5        4.5
+LINE-SHAPE                   6          5          6          5          6          5
+SHAPE-SHAPE                 10          5         10          5         10          5
+RULE-TYPE            PHYSICAL
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                   5          5          5          5          5          4
+VIA-TYPE1.6-TYPE       VIA8-BGA  ICT-SMD32
+VIA-TYPE1.6-MIN        VIA8-BGA  ICT-SMD32
+VIA-TYPE2-TYPE         VIA8-BGA  ICT-SMD32
+VIA-TYPE2-MIN          VIA8-BGA  ICT-SMD32
+VIA-TYPE2.5-TYPE
+VIA-TYPE2.5-MIN
+VIA-TYPE3-TYPE
+VIA-TYPE3-MIN
+ 
+TECHNICS            BACKPLANE  TECHNICS 1.0
+TECHNICS-INFO       TEST VERSION 1.0
+TECHNICS-INFO       Release at 2002-06-10
+TECHNICS-INFO       For backplane applications
+TECHNICS-INFO       This technics datasheet only be used for
+TECHNICS-INFO       CONSTRAINS INPUT SYSTEMS V1.0
+ 
+ 
+RULE-TYPE           CONSTRAINTS
+PLANE-ISLANDS            0
+SOLDER-ALIGNMENT         0
+SOLDER-SOLDER            4
+ 
+ 
+ 
+AREA                  DEFAULT
+AREA-INFO           This data is used for COMMON AREA in the PCB
+AREA-INFO           This technics datasheet only be used for
+AREA-INFO           CONSTRAINS INPUT SYSTEMS V1.0
+RULE-TYPE             SPACING
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+PIN-PIN                     15         15         15         15         15         15
+PIN-SMD                     20         20         50         50         20         20
+PIN-TPIN                    15         15         15         15         15         15
+PIN-VIA                     20         20         20         20         20         20
+PIN-TVIA                    13         13         30         24         13         13
+PIN-BBVIA                    8          8          8          8          8          8
+PIN-BONDPAD                  8          8          8          8          8          8
+PIN-LINE                     7          6          7          6          7          6
+PIN-SHAPE                   12         10         12         10          7          6
+SMD-SMD                     20         20         20         20         20         20
+SMD-TPIN                    20         20         50         50         20         20
+SMD-VIA                     10         10         10         10         10         10
+SMD-TVIA                    10         10         10         10         10         10
+SMD-BBVIA                    8          8          8          8          8          8
+SMD-BONDPAD                  8          8          8          8          8          8
+SMD-LINE                     8          7          8          7          8          7
+SMD-SHAPE                   12         10         12         10          7          6
+TPIN-TPIN                   18         18         18         18         18         18
+TPIN-VIA                     8          7         20         20          7          7
+TPIN-TVIA                    8          7         38         24          7          7
+TPIN-BBVIA                   8          8          8          8          8          8
+TPIN-BONDPAD                 8          8          8          8          8          8
+TPIN-LINE                    8          7          8          8          8          8
+TPIN-SHAPE                  10          7         12          8         10          6
+VIA-VIA                      8          5          8          5          8          5
+VIA-TVIA                     8          5         12          8          8          5
+VIA-BBVIA                    8          8          8          8          8          8
+VIA-BONDPAD                  8          8          8          8          8          8
+VIA-LINE                     8          5          7          5          6          5
+VIA-SHAPE                   10          6         10          6         10          6
+TVIA-TVIA                    8          8         38         24          8          8
+TVIA-BBVIA                   8          8          8          8          8          8
+TVIA-BONDPAD                 8          8          8          8          8          8
+TVIA-LINE                    8          5          8          8          6          5
+TVIA-SHAPE                  10          6         12          8         10          6
+BBVIA-BBVIA                  8          6          8          6          8          6
+BBVIA-BONDPAD                8          8          8          8          8          8
+BBVIA-LINE                   8          6          8          6          8          6
+BBVIA-SHAPE                 10          6         10          6         10          6
+BONDPAD-BONDPAD              8          8          8          8          8          8
+BONDPAD-LINE                 8          8          8          8          8          8
+BONDPAD-SHAPE                8          8          8          8          8          8
+LINE-LINE                    8          5          8          5          6        4.5
+LINE-SHAPE                  10          6         10          6         10          6
+SHAPE-SHAPE                 10          6         10          6         10          6
+RULE-TYPE            PHYSICAL
+LAYER                   TOP                 BOTTOM                 INNER
+TYPE-MIN                   TYPE        MIN       TYPE        MIN       TYPE        MIN
+LINE-WIDTH                   6          5          6          5          6          4
+VIA-TYPE1.6-TYPE          VIA24
+VIA-TYPE1.6-MIN           VIA24
+VIA-TYPE2-TYPE            VIA24
+VIA-TYPE2-MIN             VIA24
+VIA-TYPE2.5-TYPE          VIA24
+VIA-TYPE2.5-MIN           VIA24
+VIA-TYPE3-TYPE            VIA24
+VIA-TYPE3-MIN             VIA24
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

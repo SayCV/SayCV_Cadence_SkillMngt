@@ -1,0 +1,24 @@
+
+A working way to handle multiple levels of configuration settings
+
+  CfgStru   -A structure that holds a set of configuration data
+  CfgList   -A list of settings structures
+  
+  FILE_Level Default (The cfg previously used on this board/file)
+  USER_Level Default
+  SITE_Level Default
+  
+  CURRENT
+  DEFAULT
+  
+  application
+    -Define CfgStru in application
+    -Define CfgList in application
+    -load FILE_Level cfg file (exists as SKILL code)
+    -load USER_Level cfg file (exists as SKILL code)
+    -load SITE_Level cfg file (exists as SKILL code)
+
+DT_CFG
+DT_CFGS
+
+

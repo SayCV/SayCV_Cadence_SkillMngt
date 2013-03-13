@@ -1,0 +1,24 @@
+10R_destub_data_build_list TIME: 2609 seconds -substring
+10R_destub_data_build_list TIME: 2608 seconds -rex
+
+--------------------------------------------------------------------------------
+RegEx
+10R_destub_data_via TIME:         31 seconds
+10R_destub_data_shape TIME:       40 seconds
+10R_destub_data_path TIME:        47 seconds
+10R_destub_data_pin TIME:         62 seconds
+10R_destub_data_branch TIME:       0 seconds
+10R_destub_data_net TIME:         49 seconds
+10R_destub_data_build_list TIME:  37 seconds
+10R_destub_grid_row_init TIME:    27 seconds
+
+--------------------------------------------------------------------------------
+No RegEx
+10R_destub_data_via TIME:         26 seconds
+10R_destub_data_shape TIME:       17 seconds
+10R_destub_data_path TIME:        23 seconds
+10R_destub_data_pin TIME:          5 seconds
+10R_destub_data_branch TIME:       0 seconds
+10R_destub_data_net TIME:         43 seconds
+10R_destub_data_build_list TIME:  16 seconds
+10R_destub_grid_row_init TIME:    12 seconds

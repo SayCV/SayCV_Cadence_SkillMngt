@@ -1,0 +1,24 @@
+The logic of mot_find_stubs.il is as follows:
+
+I.)     Get List Of All Nets
+
+II.)    Get A Single Net From The List Of Nets
+
+III.)   Get List Of All Branches In The Net
+
+IV.)    Get A Single Net Branch From The List of Net Branches
+
+V.)     Get All Children Of The Net Branch 
+          NOTE: "Children" are the Paths (clines), Pins, Vias, 
+          Shapes and such that comprise the branch.
+        
+VI.)    If a child is not a Path (cline) it is marked as a "Sibling"
+
+VII.)   If a Path (line/cline) starts at a "sibling" and ends at a 
+        sibling, the path (cline) is *not* a stub.
+
+Since a via is a type of "sibling" the logic above will fail miserably for our purposes.
+
+________________________________________________________________________________
+********************************************************************************
+--------------------------------------------------------------------------------
